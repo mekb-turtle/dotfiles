@@ -1,0 +1,54 @@
+#!/bin/bash
+if (return 2>/dev/null); then
+	echo 'This script will not work if sourced, please run it like "bash wallpaper" instead of "source wallpaper"'
+fi
+unset CURRENT
+if [[ -h "$HOME/.wallpaper" ]]; then
+	CURRENT="$(readlink -- "$HOME/.wallpaper")"
+	if [[ "$CURRENT" != "/"* ]]; then
+		CURRENT="~/$CURRENT"
+	elif [[ "$CURRENT" == "$HOME/"* ]]; then
+		CURRENT="~/${CURRENT/"$HOME/"/}"
+	elif [[ "$CURRENT" == "$HOME" ]]; then
+		CURRENT="~"
+	fi
+fi
+if [[ "$#" != "1" ]]; then
+	echo "Usage: wallpaper [file|off]"
+	if [[ "$#" == "0" ]]; then
+		if [[ -z "$CURRENT" ]]; then
+			echo "No wallpaper set"
+		else 
+			echo "Current wallpaper: $CURRENT"
+		fi
+	fi
+elif [[ "$1" == "off" ]]; then
+	if [[ -n "$CURRENT" ]]; then
+		echo "Old wallpaper: $CURRENT"
+	fi
+	rm -f -- ~/.wallpaper
+	echo "Removed wallpaper"
+elif [[ ! -e "$1" ]]; then
+	echo "File does not exist"
+elif [[ ! -f "$1" ]]; then
+	echo "File is not a regular file"
+else
+	A="$1"
+	if [[ "$A" != "/"* ]]; then
+		A="$PWD/$A"
+	fi
+	if [[ "$A" == "$HOME/"* ]]; then
+		A="${A/"$HOME/"/}"
+		while [[ "$A" == "/"* ]]; do A="${A/"/"/}"; done
+	fi
+	if [[ -n "$CURRENT" ]]; then
+		echo "Old wallpaper: $CURRENT"
+	fi
+	if ! rm -f -- ~/.wallpaper; then echo Failed to remove old wallpaper; exit 1; fi
+	if ! ln -s -- "$A" ~/.wallpaper; then echo Failed to symlink new wallpaper; exit 1; fi
+	rewallpaper
+	if [[ "$A" != "/"* ]]; then
+		A="~/$A"
+	fi
+	echo "New wallpaper: $A"
+fi

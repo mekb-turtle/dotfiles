@@ -1,0 +1,90 @@
+#!/usr/bin/bash
+LMB=mouse:272
+RMB=mouse:273
+MMB=mouse:274
+MOD=SUPER
+if [[ "$1" == "off" ]]; then
+	hyprctl keyword unbind "$MOD"', Escape'
+	hyprctl keyword bind "$MOD"', Escape, exec, ~/.bin/appbinds on'
+	hyprctl keyword general:col.active_border 0xfff38ba8
+fi
+if [[ "$1" == "off" ]] || [[ "$1" == "on" ]]; then
+	hyprctl keyword unbind "$MOD"', Space'
+	hyprctl keyword unbind "$MOD"', A'
+	hyprctl keyword unbind "$MOD"', B'
+	hyprctl keyword unbind "$MOD"', C'
+	hyprctl keyword unbind "$MOD"', Z'
+	hyprctl keyword unbind "$MOD"', N'
+	hyprctl keyword unbind "$MOD"', L'
+	hyprctl keyword unbind "$MOD"', T'
+	hyprctl keyword unbind "$MOD"', Y'
+	hyprctl keyword unbind "$MOD"', K'
+	hyprctl keyword unbind 'CTRL ALT, Delete'
+	hyprctl keyword unbind 'CTRL ALT, End'
+	hyprctl keyword unbind "$MOD"', R'
+	hyprctl keyword unbind "$MOD"' SHIFT, R'
+	hyprctl keyword unbind "$MOD"', KP_Up'
+	hyprctl keyword unbind "$MOD"', KP_Down'
+	hyprctl keyword unbind ', Print'
+	hyprctl keyword unbind 'CTRL, Print'
+	hyprctl keyword unbind 'ALT, Print'
+	hyprctl keyword unbind 'SHIFT, Print'
+	hyprctl keyword unbind 'SUPER, Print'
+	hyprctl keyword unbind "$MOD"', Q'
+	hyprctl keyword unbind "$MOD"', W'
+	hyprctl keyword unbind "$MOD"', E'
+	hyprctl keyword unbind "$MOD"' SHIFT, Q'
+	hyprctl keyword unbind "$MOD"' SHIFT, W'
+	hyprctl keyword unbind "$MOD"' SHIFT, E'
+	hyprctl keyword unbind "$MOD"', P'
+	hyprctl keyword unbind "$MOD"', M'
+	hyprctl keyword unbind "$MOD"' SHIFT, P'
+	hyprctl keyword unbind "$MOD"', G'
+	hyprctl keyword unbind "$MOD"', V'
+	hyprctl keyword unbind "$MOD"', F'
+	hyprctl keyword unbind "$MOD"' SHIFT, F'
+else
+	echo "Usage: appbinds <on|off>"
+	exit 1
+fi
+if [[ "$1" == "on" ]]; then
+	hyprctl keyword unbind "$MOD"', Escape'
+	hyprctl keyword bind "$MOD"', Escape, exec, ~/.bin/appbinds off'
+	hyprctl keyword general:col.active_border 0xfff5c2e7
+	hyprctl keyword bind "$MOD"', Space, exec, true|wl-copy'
+	hyprctl keyword bind "$MOD"', A, exec, $HOME/.bin/emojiclip'
+	hyprctl keyword bind "$MOD"', B, exec, killall -SIGUSR1 waybar'
+	hyprctl keyword bind "$MOD"', C, exec, cliphist list|rofi -dmenu|cliphist decode|wl-copy'
+	hyprctl keyword bind "$MOD"', Z, exec, dunstctl history-pop'
+	hyprctl keyword bind "$MOD"', N, exec, nemo'
+	hyprctl keyword bind "$MOD"', L, exec, swaylock --grace-no-mouse --grace-no-touch --grace 0 --fade-in 0'
+	hyprctl keyword bind "$MOD"', T, exec, kitty'
+	hyprctl keyword bind "$MOD"', Y, exec, librewolf'
+	hyprctl keyword bind "$MOD"', K, exec, keepassxc'
+	hyprctl keyword bind 'CTRL ALT, Delete, exec, $HOME/.bin/power'
+	hyprctl keyword bind 'CTRL ALT, End, exec, $HOME/.bin/killwindow'
+	hyprctl keyword bind "$MOD"', R, exec, rofi -show drun'
+	hyprctl keyword bind "$MOD"' SHIFT, R, exec, rofi -show run'
+	hyprctl keyword bind "$MOD"', KP_Up, exec, pamixer -i 5'
+	hyprctl keyword bind "$MOD"', KP_Down, exec, pamixer -d 5'
+	hyprctl keyword bind ', Print, exec, ~/.bin/screenshot area'
+	hyprctl keyword bind 'CTRL, Print, exec, ~/.bin/screenshot active'
+	hyprctl keyword bind 'ALT, Print, exec, ~/.bin/screenshot color'
+	hyprctl keyword bind 'SHIFT, Print, exec, ~/.bin/screenshot monitor'
+	hyprctl keyword bind 'CTRL SHIFT, Print, exec, ~/.bin/screenshot desktop'
+	hyprctl keyword bind 'SUPER, Print, exec, notify-send -- $'"'\n-: selection\nCTRL: active window\nALT: color\nSHIFT: monitor\nCTRL SHIFT: all monitors'"
+	hyprctl keyword bind "$MOD"', Q, workspace, 10'
+	hyprctl keyword bind "$MOD"', W, workspace, 11'
+	hyprctl keyword bind "$MOD"', E, workspace, 12'
+	hyprctl keyword bind "$MOD"' SHIFT, Q, movetoworkspace, 10'
+	hyprctl keyword bind "$MOD"' SHIFT, W, movetoworkspace, 11'
+	hyprctl keyword bind "$MOD"' SHIFT, E, movetoworkspace, 12'
+	hyprctl keyword bind "$MOD"', P, exec, ~/.bin/screenshotpreview'
+	hyprctl keyword bind "$MOD"', M, exec, orage'
+	hyprctl keyword bind "$MOD"' SHIFT, P, exec, ~/.bin/qrcodescan'
+	hyprctl keyword bind "$MOD"', G, exec, gimp'
+	hyprctl keyword bind "$MOD"', V, togglefloating'
+	hyprctl keyword bind "$MOD"', F, fullscreen'
+	hyprctl keyword bind "$MOD"' SHIFT, F, fakefullscreen'
+fi
+exit 0

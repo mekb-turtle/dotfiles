@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+WALLPAPER="${1-$HOME/.wallpaper}"
+killall swaybg
+swaybg -c "#1e1e2e" -m fill -i "$WALLPAPER" >/dev/null &disown

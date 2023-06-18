@@ -1,0 +1,27 @@
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+- defaults:
+    link:
+      relink: true
+
+- create:
+  - ~/.config/
+  - ~/.config/hypr
+  - ~/.config/hypr/themes
+  - ~/.config/dunst
+  - ~/.bin/
+
+- link:
+    ~/.config/dunst/dunstrc: dunstrc
+    ~/.bin/appbinds: appbinds
+    ~/.bin/updategtk: updategtk
+    ~/.bin/startxdgportal: startxdgportal
+    ~/.bin/startpipewire: startpipewire
+    ~/.bin/rewallpaper: rewallpaper
+    ~/.bin/wallpaper: wallpaper
+    ~/.config/hypr/themes/latte.conf: hyprland/themes/latte.conf
+    ~/.config/hypr/themes/frappe.conf: hyprland/themes/frappe.conf
+    ~/.config/hypr/themes/macchiato.conf: hyprland/themes/macchiato.conf
+    ~/.config/hypr/themes/mocha.conf: hyprland/themes/mocha.conf
+    ~/.config/hypr/hyprland.conf: hyprland.conf

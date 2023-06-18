@@ -1,0 +1,8 @@
+killall pipewire pipewire-pulse wireplumber
+sleep 0.3
+pipewire&
+pipewire-pulse&
+wireplumber&
+disown
+pactl unload-module module-null-sink
+pactl load-module module-null-sink sink_name=NullSink && pactl load-module module-loopback source=NullSink.monitor sink="alsa_output.pci-0000_0c_00.6.analog-stereo"
