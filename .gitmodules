@@ -2,6 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "hyprland"]
-	path = hyprland
+[submodule "catppuccin-hyprland"]
+	path = catppuccin-hyprland
 	url = https://github.com/catppuccin/hyprland
