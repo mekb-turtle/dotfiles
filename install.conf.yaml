@@ -20,8 +20,8 @@
     ~/.bin/startpipewire: startpipewire
     ~/.bin/rewallpaper: rewallpaper
     ~/.bin/wallpaper: wallpaper
-    ~/.config/hypr/themes/latte.conf: hyprland/themes/latte.conf
-    ~/.config/hypr/themes/frappe.conf: hyprland/themes/frappe.conf
-    ~/.config/hypr/themes/macchiato.conf: hyprland/themes/macchiato.conf
-    ~/.config/hypr/themes/mocha.conf: hyprland/themes/mocha.conf
+    ~/.config/hypr/themes/latte.conf: catppuccin-hyprland/themes/latte.conf
+    ~/.config/hypr/themes/frappe.conf: catppuccin-hyprland/themes/frappe.conf
+    ~/.config/hypr/themes/macchiato.conf: catppuccin-hyprland/themes/macchiato.conf
+    ~/.config/hypr/themes/mocha.conf: catppuccin-hyprland/themes/mocha.conf
     ~/.config/hypr/hyprland.conf: hyprland.conf
