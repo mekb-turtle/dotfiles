@@ -1,0 +1,90 @@
+* {
+	font-family: Ubuntu, sans-serif;
+	font-size: 12px;
+}
+
+window#waybar {
+	background-color: rgba(0, 0, 0, 0);
+	color: #cdd6f4;
+	transition-property: background-color;
+	transition-duration: .5s;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+button {
+	color: #cdd6f4;
+	background: rgba(0, 0, 0, 0.2);
+	border: none;
+	border-radius: 0;
+}
+
+#custom-padding {
+	font-size: 0;
+	margin: 0;
+	padding-left: 5px;
+	padding-right: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+	padding: 0 10px;
+	border-radius: 0 0 6px 6px;
+	margin-left: 5px;
+	color: #cdd6f4;
+	background: rgba(0, 0, 0, 0.2);
+	/*background-color: #cdd6f4;
+	color: #1e1e2e;*/
+}
+
+#tray {
+	color: #cdd6f4;
+	background: rgba(0, 0, 0, 0.2);
+	/*background-color: #1e1e2e;
+	color: #cdd6f4;*/
+}
+
+#workspaces {
+	margin: 0;
+}
+
+#taskbar:last-child {
+	margin: 0 5px 0 0;
+}
+
+#workspaces button:first-child, #taskbar button:first-child {
+	border-bottom-left-radius: 6px;
+}
+
+#workspaces button:last-child, #taskbar button:last-child {
+	border-bottom-right-radius: 6px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+	margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+	margin-right: 0;
+}
+

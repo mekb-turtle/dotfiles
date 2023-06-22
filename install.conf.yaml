@@ -14,6 +14,7 @@
 
 - link:
     ~/.config/dunst/dunstrc: dunstrc
+    ~/.bin/power: power
     ~/.bin/appbinds: appbinds
     ~/.bin/updategtk: updategtk
     ~/.bin/startxdgportal: startxdgportal
@@ -25,3 +26,5 @@
     ~/.config/hypr/themes/macchiato.conf: catppuccin-hyprland/themes/macchiato.conf
     ~/.config/hypr/themes/mocha.conf: catppuccin-hyprland/themes/mocha.conf
     ~/.config/hypr/hyprland.conf: hyprland.conf
+    ~/.config/waybar/config.jsonc: waybar/config.jsonc
+    ~/.config/waybar/style.css: waybar/style.css

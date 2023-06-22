@@ -1,0 +1,144 @@
+{
+	"layer": "top", // Waybar at top layer
+	"position": "top", // Waybar position (top|bottom|left|right)
+	"height": 36, // Waybar height (to be removed for auto height)
+	// "width": 1280, // Waybar width
+	"spacing": 0, // Gaps between modules (4px)
+	// Choose the order of the modules
+	"modules-left": [ "custom/padding", "wlr/taskbar", "wlr/workspaces", "custom/padding" ],
+	"modules-center": [ ],
+	"modules-right": [ "custom/padding", "battery", "mpd", "pulseaudio", "clock", "custom/uptime", "custom/weather", "tray", "custom/padding" ],
+	"output": [ "HDMI-A-1", "DP-1" ],
+	// Modules configuration
+	// "sway/workspaces": {
+	//	 "disable-scroll": true,
+	//	 "all-outputs": true,
+	//	 "format": "{name}: {icon}",
+	//	 "format-icons": {
+	//		 "1": "",
+	//		 "2": "",
+	//		 "3": "",
+	//		 "4": "",
+	//		 "5": "",
+	//		 "urgent": "",
+	//		 "focused": "",
+	//		 "default": ""
+	//	 }
+	// },
+	"battery": {
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}{capacity}%",
+		"format-charging": "{icon}󱐋 {capacity}%",
+		"format-plugged": "{icon} {capacity}%",
+		"format-icons": [" ", " ", " ", " ", " "]
+	},
+	"custom/padding": {
+		"tooltip": false,
+		"format": " "
+	},
+	"custom/run": {
+		"tooltip": false,
+		"format": " ",
+		"on-click": "rofi -show drun",
+		"on-click-right": "rofi -show run"
+	},
+	"custom/swayidle": {
+		"tooltip": false,
+		"exec": "./isswayidle/build/debug/bin/isswayidle s",
+		"interval": 3600,
+		"format": "{}",
+		"on-click": "./toggleswayidle",
+		"signal": 8
+	},
+	"mpd": {
+		"server": "/run/user/1000/mpd/socket",
+		"state-icons": { "playing": "▶️", "paused": "⏸️" },
+		"consume-icons": { "on": "✂️", "off": "" },
+		"random-icons": { "on": "🔀", "off": "" },
+		"repeat-icons": { "on": "🔁", "off": "" },
+		"single-icons": { "on": "1️⃣", "off": "" },
+		//"format": "{stateIcon}{consumeIcon}{randomIcon}{repeatIcon}{singleIcon} {title} - {elapsedTime:%M:%S} / {totalTime:%M:%S}",
+		"format": "{stateIcon}{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}",
+		"format-stopped": " stopped",
+		"format-disconnected": "disconnected",
+		"tooltip": true,
+		"tooltip-format": "{title}\nArtist: {artist}\nAlbum: {album}\n{elapsedTime} / {totalTime}\n\nVolume: {volume}%",
+		"on-click": "mpc toggle",
+		"on-click-right": "xfmpc",
+		"on-click-middle": "pavucontrol"
+	},
+	"wlr/taskbar": {
+		"icon-theme": "Papirus",
+		"icon-size": 16,
+		"format": "{icon} {title}",
+		"active-first": false,
+		"on-click": "activate",
+		"on-click-right": "close",
+		"on-click-middle": "fullscreen"
+	},
+	"wlr/workspaces": {
+		"on-click": "activate"
+	},
+	"clock": {
+		"interval": 1,
+		"tooltip": true,
+		"tooltip-format": "<big>{:%Y %B %d</big>\n%a %H.%M.%S}\n<tt><small>{calendar}</small></tt>",
+		"format": "🕒 {:%Y.%m.%d %a %H.%M.%S}"
+	},
+	"cpu": {
+		"format": "󰻠 {usage}%"
+	},
+	"memory#mem": {
+		"format": "󰍛 {percentage}%",
+		"tooltip": true,
+		"tooltip-format": "{used}G/{total}G - {percentage}% mem"
+	},
+	"memory#swap": {
+		"format": "󰾴 {swapPercentage}%",
+		"tooltip": true,
+		"tooltip-format": "{swapUsed}G/{swapTotal}G - {swapPercentage}% used"
+	},
+	"disk": {
+		"format": "󰋊 {percentage_used}%",
+		"tooltip": true,
+		"tooltip-format": "{used}/{total} - {percentage_used}% used",
+		"on-click-right": "baobab /"
+	},
+	"network": {
+		"format-wifi": " {ipaddr}",
+		"format-ethernet": "󰈀 {ipaddr}",
+		"format-disconnected": "󱛅 disconnected",
+		"tooltip-format-wifi": "{ifname}: {essid} ({signalStrength}%) {ipaddr}/{cidr}",
+		"tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr}",
+		"tooltip-format-disconnected": "disconnected",
+		"on-click": "iwgtk"
+	},
+	"tray": {
+		"spacing": 10
+	},
+	"pulseaudio": {
+		"scroll-step": 1,
+		"format": "{volume}% {icon} {format_source}",
+		"format-muted": "󰝟 {format_source}",
+		"format-bluetooth": "{volume}% {icon} {format_source}",
+		"format-bluetooth-muted": "󰝟  {format_source}",
+		"format-source": "{volume}% ",
+		"format-source-muted": " ",
+		"format-icons": {
+			"headphone": "󰋋 ",
+			"hands-free": "󰋎 ",
+			"headset": "󰋎 ",
+			"phone": " ",
+			"portable": " ",
+			"car": " ",
+			"default": ["󰕿", "󰖀", " "]
+		},
+		"on-click": "pavucontrol",
+		"on-click-right": "pavucontrol"
+	}
+}
+
+
