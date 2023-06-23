@@ -1,7 +1,6 @@
 #!/usr/bin/bash
-LMB=mouse:272
-RMB=mouse:273
-MMB=mouse:274
+[[ -e /tmp/appbindslock ]] && exit 1
+touch -- /tmp/appbindslock
 MOD=SUPER
 if [[ "$1" == "off" ]]; then
 	hyprctl keyword unbind "$MOD"', Escape'
@@ -87,4 +86,5 @@ if [[ "$1" == "on" ]]; then
 	hyprctl keyword bind "$MOD"', F, fullscreen'
 	hyprctl keyword bind "$MOD"' SHIFT, F, fakefullscreen'
 fi
+rm -- /tmp/appbindslock
 exit 0
