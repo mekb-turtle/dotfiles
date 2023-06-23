@@ -21,6 +21,8 @@
     ~/.bin/startpipewire: startpipewire
     ~/.bin/rewallpaper: rewallpaper
     ~/.bin/wallpaper: wallpaper
+    ~/.bin/killwindow: killwindow
+    ~/.bin/forcekillwindow: forcekillwindow
     ~/.config/hypr/themes/latte.conf: catppuccin-hyprland/themes/latte.conf
     ~/.config/hypr/themes/frappe.conf: catppuccin-hyprland/themes/frappe.conf
     ~/.config/hypr/themes/macchiato.conf: catppuccin-hyprland/themes/macchiato.conf
