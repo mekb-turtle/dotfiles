@@ -1,5 +1,5 @@
 <h2 align="center">
-🚀 mekb's dot files<br/><br/>
+🚀 mekb's dot files (incomplete)<br/><br/>
 <img src="assets/preview.png" alt="Preview"/>
 </h2>
 
