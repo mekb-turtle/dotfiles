@@ -8,7 +8,7 @@
 	"modules-left": [ "custom/padding", "wlr/taskbar", "wlr/workspaces", "custom/padding" ],
 	"modules-center": [ ],
 	"modules-right": [ "custom/padding", "battery", "mpd", "pulseaudio", "clock", "custom/uptime", "custom/weather", "tray", "custom/padding" ],
-	"output": [ "HDMI-A-1", "DP-1" ],
+	"output": [ "DP-2", "HDMI-A-1", "DP-1" ],
 	// Modules configuration
 	// "sway/workspaces": {
 	//	 "disable-scroll": true,
