@@ -43,6 +43,8 @@ if [[ "$1" == "off" ]] || [[ "$1" == "on" ]]; then
 	hyprctl keyword unbind "$MOD"', V'
 	hyprctl keyword unbind "$MOD"', F'
 	hyprctl keyword unbind "$MOD"' SHIFT, F'
+	hyprctl keyword unbind 'ALT, Tab'
+	hyprctl keyword unbind 'ALT SHIFT, Tab'
 else
 	echo "Usage: appbinds <on|off>"
 	exit 1
@@ -87,6 +89,8 @@ if [[ "$1" == "on" ]]; then
 	hyprctl keyword bind "$MOD"', V, togglefloating'
 	hyprctl keyword bind "$MOD"', F, fullscreen'
 	hyprctl keyword bind "$MOD"' SHIFT, F, fakefullscreen'
+	hyprctl keyword bind 'ALT, Tab, cyclenext'
+	hyprctl keyword bind 'ALT SHIFT, Tab, cyclenext, prev'
 fi
 rm -- /tmp/appbindslock
 exit 0
