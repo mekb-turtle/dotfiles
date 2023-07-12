@@ -7,7 +7,7 @@
 	// Choose the order of the modules
 	"modules-left": [ "custom/padding", "wlr/taskbar", "wlr/workspaces", "custom/padding" ],
 	"modules-center": [ ],
-	"modules-right": [ "custom/padding", "battery", "mpd", "pulseaudio", "clock", "custom/uptime", "custom/weather", "tray", "custom/padding" ],
+	"modules-right": [ "custom/padding", "battery", "mpd", "pulseaudio", "clock", "tray", "custom/padding" ],
 	"output": [ "DP-2", "HDMI-A-1", "DP-1" ],
 	// Modules configuration
 	// "sway/workspaces": {
@@ -38,20 +38,6 @@
 	"custom/padding": {
 		"tooltip": false,
 		"format": " "
-	},
-	"custom/run": {
-		"tooltip": false,
-		"format": " ",
-		"on-click": "rofi -show drun",
-		"on-click-right": "rofi -show run"
-	},
-	"custom/swayidle": {
-		"tooltip": false,
-		"exec": "./isswayidle/build/debug/bin/isswayidle s",
-		"interval": 3600,
-		"format": "{}",
-		"on-click": "./toggleswayidle",
-		"signal": 8
 	},
 	"mpd": {
 		"server": "/run/user/1000/mpd/socket",
