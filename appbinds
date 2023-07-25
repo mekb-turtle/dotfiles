@@ -62,7 +62,7 @@ if [[ "$1" == "on" ]]; then
 	hyprctl keyword bind "$MOD"', L, exec, swaylock --grace-no-mouse --grace-no-touch --grace 0 --fade-in 0'
 	hyprctl keyword bind "$MOD"', T, exec, kitty'
 	hyprctl keyword bind "$MOD"', Y, exec, librewolf'
-	hyprctl keyword bind "$MOD"', K, exec, keepassxc'
+	hyprctl keyword bind "$MOD"', K, exec, ~/.bin/startkeepassxc'
 	hyprctl keyword bind 'CTRL ALT, Delete, exec, $HOME/.bin/power'
 	hyprctl keyword bind "$MOD"', R, exec, rofi -show drun'
 	hyprctl keyword bind "$MOD"' SHIFT, R, exec, rofi -show run'
