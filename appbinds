@@ -45,6 +45,14 @@ if [[ "$1" == "off" ]] || [[ "$1" == "on" ]]; then
 	hyprctl keyword unbind "$MOD"' SHIFT, F'
 	hyprctl keyword unbind 'ALT, Tab'
 	hyprctl keyword unbind 'ALT SHIFT, Tab'
+	hyprctl keyword unbind "$MOD"', left'
+	hyprctl keyword unbind "$MOD"', right'
+	hyprctl keyword unbind "$MOD"', up'
+	hyprctl keyword unbind "$MOD"', down'
+	hyprctl keyword unbind "$MOD"' SHIFT, left'
+	hyprctl keyword unbind "$MOD"' SHIFT, right'
+	hyprctl keyword unbind "$MOD"' SHIFT, up'
+	hyprctl keyword unbind "$MOD"' SHIFT, down'
 else
 	echo "Usage: appbinds <on|off>"
 	exit 1
@@ -91,6 +99,14 @@ if [[ "$1" == "on" ]]; then
 	hyprctl keyword bind "$MOD"' SHIFT, F, fakefullscreen'
 	hyprctl keyword bind 'ALT, Tab, cyclenext'
 	hyprctl keyword bind 'ALT SHIFT, Tab, cyclenext, prev'
+	hyprctl keyword bind "$MOD"', left, movefocus, l'
+	hyprctl keyword bind "$MOD"', right, movefocus, r'
+	hyprctl keyword bind "$MOD"', up, movefocus, u'
+	hyprctl keyword bind "$MOD"', down, movefocus, d'
+	hyprctl keyword bind "$MOD"' SHIFT, left, movewindow, l'
+	hyprctl keyword bind "$MOD"' SHIFT, right, movewindow, r'
+	hyprctl keyword bind "$MOD"' SHIFT, up, movewindow, u'
+	hyprctl keyword bind "$MOD"' SHIFT, down, movewindow, d'
 fi
 rm -- /tmp/appbindslock
 exit 0
