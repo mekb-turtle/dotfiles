@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Get the mount point from udiskie
+mount_point="$1"
+
+# Show a Zenity prompt dialog
+zenity --question \
+	--text="Do you want to mount the device at $mount_point?" \
+	--title="Mount Device Confirmation"
+
+# Check the exit status of Zenity
+if [[ "$?" -eq 0 ]]; then
+	# User clicked "OK", mount the device
+	udisksctl mount --block-device "$mount_point"
+else
+	# User clicked "Cancel", do nothing
+	exit 1
+fi
+
