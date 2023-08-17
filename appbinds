@@ -21,13 +21,23 @@ if [[ "$1" == "off" ]] || [[ "$1" == "on" ]]; then
 	hyprctl keyword unbind 'CTRL ALT, Delete'
 	hyprctl keyword unbind "$MOD"', R'
 	hyprctl keyword unbind "$MOD"' SHIFT, R'
+
+	hyprctl keyword unbind ', XKF86MonBrightnessUp'
+	hyprctl keyword unbind ', XKF86MonBrightnessDown'
+	hyprctl keyword unbind ', XKF86AudioRaiseVolume'
+	hyprctl keyword unbind ', XKF86AudioLowerVolume'
+	hyprctl keyword unbind ', XKF86AudioMute'
+	hyprctl keyword unbind ', XKF86AudioMicMute'
 	hyprctl keyword unbind "$MOD"', KP_Up'
+	hyprctl keyword unbind "$MOD"', KP_Begin'
 	hyprctl keyword unbind "$MOD"', KP_Down'
+
 	hyprctl keyword unbind ', Print'
 	hyprctl keyword unbind 'CTRL, Print'
 	hyprctl keyword unbind 'ALT, Print'
 	hyprctl keyword unbind 'SHIFT, Print'
 	hyprctl keyword unbind 'SUPER, Print'
+
 	hyprctl keyword unbind "$MOD"', grave'
 	hyprctl keyword unbind "$MOD"', Q'
 	hyprctl keyword unbind "$MOD"', W'
@@ -63,6 +73,7 @@ if [[ "$1" == "on" ]]; then
 	hyprctl keyword unbind "$MOD"', Escape'
 	hyprctl keyword bind "$MOD"', Escape, exec, ~/.bin/appbinds off'
 	hyprctl keyword general:col.active_border 0xfff5c2e7
+
 	hyprctl keyword bind "$MOD"', Space, exec, true|wl-copy'
 	hyprctl keyword bind "$MOD"', A, exec, $HOME/.bin/emojiclip'
 	hyprctl keyword bind "$MOD"', B, exec, killall -SIGUSR1 waybar'
@@ -76,14 +87,24 @@ if [[ "$1" == "on" ]]; then
 	hyprctl keyword bind 'CTRL ALT, Delete, exec, $HOME/.bin/power'
 	hyprctl keyword bind "$MOD"', R, exec, rofi -show drun'
 	hyprctl keyword bind "$MOD"' SHIFT, R, exec, rofi -show run'
-	hyprctl keyword bind "$MOD"', KP_Up, exec, pamixer -i 5'
-	hyprctl keyword bind "$MOD"', KP_Down, exec, pamixer -d 5'
+
+	hyprctl keyword bind ', XKF86MonBrightnessUp, exec, swayosd-client --brightness +5'
+	hyprctl keyword bind ', XKF86MonBrightnessDown, exec, swayosd-client --brightness -5'
+	hyprctl keyword bind ', XKF86AudioRaiseVolume, exec, swayosd-client --output-volume +5'
+	hyprctl keyword bind ', XKF86AudioLowerVolume, exec, swayosd-client --output-volume -5'
+	hyprctl keyword bind ', XKF86AudioMute, exec, swayosd-client --output-volume mute-toggle'
+	hyprctl keyword bind ', XKF86AudioMicMute, exec, swayosd-client --input-volume mute-toggle'
+	hyprctl keyword bind "$MOD"', KP_Up, exec, swayosd-client --output-volume +5'
+	hyprctl keyword bind "$MOD"', KP_Begin, exec, swayosd-client --output-volume mute-toggle'
+	hyprctl keyword bind "$MOD"', KP_Down, exec, swayosd-client --output-volume -5'
+
 	hyprctl keyword bind ', Print, exec, ~/.bin/screenshot area'
 	hyprctl keyword bind 'CTRL, Print, exec, ~/.bin/screenshot active'
 	hyprctl keyword bind 'ALT, Print, exec, ~/.bin/screenshot color'
 	hyprctl keyword bind 'SHIFT, Print, exec, ~/.bin/screenshot monitor'
 	hyprctl keyword bind 'CTRL SHIFT, Print, exec, ~/.bin/screenshot desktop'
 	hyprctl keyword bind 'SUPER, Print, exec, notify-send -- $'"'\n-: selection\nCTRL: active window\nALT: color\nSHIFT: monitor\nCTRL SHIFT: all monitors'"
+
 	hyprctl keyword bind "$MOD"', grave, workspace, 9'
 	hyprctl keyword bind "$MOD"', Q, workspace, 10'
 	hyprctl keyword bind "$MOD"', W, workspace, 11'
