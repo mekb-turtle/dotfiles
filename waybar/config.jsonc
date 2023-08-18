@@ -71,8 +71,20 @@
 	"clock": {
 		"interval": 1,
 		"tooltip": true,
-		"tooltip-format": "<big>{:%Y %B %d</big>\n%a %H.%M.%S}\n<tt><small>{calendar}</small></tt>",
-		"format": "🕒 {:%Y.%m.%d %a %H.%M.%S}"
+		"tooltip-format": "\n<tt><small>{calendar}</small></tt>",
+		"format": "🕒 {:%Y.%m.%d %a %H.%M.%S}",
+		"calendar": {
+			"mode": "year",
+			"mode-mon-col": 3,
+			"weeks-pos": "right",
+			"format": {
+				"months": "<span color='#f9e2af'>{}</span>",
+				"days": "<span color='#89b4fa'>{}</span>",
+				"weeks": "<span color='#94e2d5'>w{}</span>",
+				"weekdays": "<span color='#fab387'>{}</span>",
+				"today": "<span color='#f5c2e7'><b><u>{}</u></b></span>"
+			}
+		}
 	},
 	"cpu": {
 		"format": "󰻠 {usage}%"
