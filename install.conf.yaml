@@ -13,6 +13,7 @@
   - ~/.bin/
 
 - link:
+    ~/.config/swaylock/config: swaylock.conf
     ~/.config/kitty/kitty.conf: kitty.conf
     ~/.config/dunst/dunstrc: dunstrc
     ~/.bin/power: power
