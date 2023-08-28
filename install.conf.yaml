@@ -16,6 +16,7 @@
     ~/.config/swaylock/config: swaylock.conf
     ~/.config/kitty/kitty.conf: kitty.conf
     ~/.config/dunst/dunstrc: dunstrc
+    ~/.bin/startkeepassxc: startkeepassxc
     ~/.bin/power: power
     ~/.bin/appbinds: appbinds
     ~/.bin/updategtk: updategtk
