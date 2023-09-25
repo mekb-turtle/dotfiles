@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+swayidle -w timeout 60 swaylock &

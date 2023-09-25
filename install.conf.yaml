@@ -18,6 +18,8 @@
     ~/.config/dunst/dunstrc: dunstrc
     ~/.bin/startkeepassxc: startkeepassxc
     ~/.bin/power: power
+    ~/.bin/toggleswayidle: toggleswayidle
+    ~/.bin/startswayidle: startswayidle
     ~/.bin/appbinds: appbinds
     ~/.bin/updategtk: updategtk
     ~/.bin/startxdgportal: startxdgportal
