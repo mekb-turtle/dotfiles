@@ -20,6 +20,7 @@
     ~/.bin/power: power
     ~/.bin/toggleswayidle: toggleswayidle
     ~/.bin/startswayidle: startswayidle
+    ~/.bin/stopswayidle: stopswayidle
     ~/.bin/appbinds: appbinds
     ~/.bin/updategtk: updategtk
     ~/.bin/startxdgportal: startxdgportal

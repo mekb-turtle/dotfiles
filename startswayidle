@@ -1,2 +1,4 @@
 #!/usr/bin/bash
+dunstctl set-paused true
 swayidle -w timeout 60 swaylock &
+dunstctl set-paused false
