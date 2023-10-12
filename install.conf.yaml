@@ -18,6 +18,7 @@
     ~/.config/dunst/dunstrc: dunstrc
     ~/.bin/startkeepassxc: startkeepassxc
     ~/.bin/power: power
+    ~/.bin/doswaylock: doswaylock
     ~/.bin/toggleswayidle: toggleswayidle
     ~/.bin/startswayidle: startswayidle
     ~/.bin/stopswayidle: stopswayidle

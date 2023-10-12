@@ -85,7 +85,7 @@ if [[ "$1" == "on" ]]; then
 	hyprctl keyword bind "$MOD"' SHIFT, C, exec, cliphist wipe && notify-send "cleared clipboard history" -a ""'
 	hyprctl keyword bind "$MOD"', Z, exec, dunstctl history-pop'
 	hyprctl keyword bind "$MOD"', N, exec, nemo'
-	hyprctl keyword bind "$MOD"', L, exec, dunstctl set-paused true; swaylock --grace-no-mouse --grace-no-touch --grace 0 --fade-in 0; dunstctl set-paused false'
+	hyprctl keyword bind "$MOD"', L, exec, ~/.bin/doswaylock y'
 	hyprctl keyword bind "$MOD"' SHIFT, L, exec, ~/.bin/toggleswayidle'
 	hyprctl keyword bind "$MOD"', T, exec, kitty'
 	hyprctl keyword bind "$MOD"', I, exec, killall -SIGUSR2 wvkbd-mobintl'

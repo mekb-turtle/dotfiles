@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-swayidle -w timeout 60 "dunstctl set-paused true; swaylock; dunstctl set-paused false" &
+swayidle -w timeout 60 ~/.bin/doswaylock &
