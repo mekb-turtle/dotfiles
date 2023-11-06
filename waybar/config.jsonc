@@ -62,7 +62,7 @@
 		"format": "{icon} {title}",
 		"active-first": false,
 		"on-click": "activate",
-		"on-click-right": "close",
+		"on-click-right": "",
 		"on-click-middle": "fullscreen"
 	},
 	"wlr/workspaces": {
