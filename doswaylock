@@ -2,7 +2,7 @@
 if ! pidof -sq swaylock; then
 	args=()
 	if [[ "$1" == "y" || "$1" == "yes" ]]; then
-		args=(--grace-no-mouse --grace-no-touch --grace 0 --fade-in 0)
+		args=(--grace-no-mouse --grace-no-touch --grace 0 --fade-in 0.5)
 	fi
 	dunstctl set-paused true
 	swaylock "${args[@]}"

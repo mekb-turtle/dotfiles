@@ -7,9 +7,10 @@
 
 - create:
   - ~/.config/
-  - ~/.config/hypr
-  - ~/.config/hypr/themes
-  - ~/.config/dunst
+  - ~/.config/hypr/
+  - ~/.config/hypr/themes/
+  - ~/.config/dunst/
+  - ~/.config/waybar/
   - ~/.bin/
 
 - link:
