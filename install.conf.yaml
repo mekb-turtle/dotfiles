@@ -31,6 +31,9 @@
     ~/.bin/wallpaper: wallpaper
     ~/.bin/killwindow: killwindow
     ~/.bin/forcekillwindow: forcekillwindow
+    ~/.bin/screenshotpreview: screenshotpreview
+    ~/.bin/screenshotocr: screenshotocr
+    ~/.bin/screenshotqr: screenshotqr
     ~/.config/hypr/themes/latte.conf: catppuccin-hyprland/themes/latte.conf
     ~/.config/hypr/themes/frappe.conf: catppuccin-hyprland/themes/frappe.conf
     ~/.config/hypr/themes/macchiato.conf: catppuccin-hyprland/themes/macchiato.conf
