@@ -7,6 +7,7 @@
 
 - create:
   - ~/.config/
+  - ~/.config/swaylock/
   - ~/.config/hypr/
   - ~/.config/hypr/themes/
   - ~/.config/dunst/
