@@ -4,5 +4,5 @@ SSH_ENV="$TMP_DIR/ssh_env"; if [[ ! -f "$SSH_ENV" ]]; then /usr/bin/ssh-agent | 
 chmod 600 -- "$SSH_ENV"
 [[ -s "$SSH_ENV" ]] && IFS=$'\n' export $(<"$SSH_ENV")
 unset TMP_DIR SSH_ENV
-env -u QT_STYLE_OVERRIDE keepassxc "$@"
+exec env -u QT_STYLE_OVERRIDE keepassxc "$@"
 
