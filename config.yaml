@@ -1,0 +1,45 @@
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+- defaults:
+    link:
+      relink: true
+
+- create:
+  - ~/.config/
+  - ~/.config/swaylock/
+  - ~/.config/kitty/
+  - ~/.config/hypr/
+  - ~/.config/hypr/themes/
+  - ~/.config/dunst/
+  - ~/.config/waybar/
+  - ~/.bin/
+
+- link:
+    ~/.config/swaylock/config: config/swaylock.conf
+    ~/.config/kitty/kitty.conf: config/kitty.conf
+    ~/.config/dunst/dunstrc: config/dunstrc
+    ~/.bin/start-keepassxc: scripts/start-keepassxc
+    ~/.bin/power: scripts/power
+    ~/.bin/lock: scripts/lock
+    ~/.bin/toggle-autolock: scripts/toggle-autolock
+    ~/.bin/keybinds: keybinds
+    ~/.bin/update-gtk: scripts/update-gtk
+    ~/.bin/hyprstart: scripts/hyprstart
+    ~/.bin/rewallpaper: scripts/rewallpaper
+    ~/.bin/wallpaper: scripts/wallpaper
+    ~/.bin/kill-window: scripts/kill-window
+    ~/.bin/screenshot: submodules/screenshot.sh/screenshot.sh
+    ~/.bin/screenshot-preview: scripts/screenshot-preview
+    ~/.bin/screenshot-ocr: scripts/screenshot-ocr
+    ~/.bin/screenshot-qr: scripts/screenshot-qr
+    ~/.bin/emoji: submodules/emojipicker/emoji
+    ~/.bin/emojiclip: submodules/emojipicker/emojiclip
+    ~/.config/hypr/themes/latte.conf: submodules/catppuccin-hyprland/themes/latte.conf
+    ~/.config/hypr/themes/frappe.conf: submodules/catppuccin-hyprland/themes/frappe.conf
+    ~/.config/hypr/themes/macchiato.conf: submodules/catppuccin-hyprland/themes/macchiato.conf
+    ~/.config/hypr/themes/mocha.conf: submodules/catppuccin-hyprland/themes/mocha.conf
+    ~/.config/hypr/hyprland.conf: hyprland.conf
+    ~/.config/hypr/conf: hyprland.conf.d
+    ~/.config/waybar/config.jsonc: config/waybar/config.jsonc
+    ~/.config/waybar/style.css: config/waybar/style.css

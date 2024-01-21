@@ -1,0 +1,11 @@
+#!/bin/bash
+killall pipewire pipewire-pulse wireplumber xdg-desktop-portal-hyprland xdg-desktop-portal-wlr xdg-desktop-portal
+sleep 0.3
+/usr/lib/xdg-desktop-portal-hyprland &
+pipewire &
+pipewire-pulse &
+wireplumber &
+disown
+pactl unload-module module-null-sink
+sleep 2
+/usr/lib/xdg-desktop-portal &

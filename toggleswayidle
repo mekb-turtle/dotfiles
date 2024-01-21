@@ -1,9 +1,0 @@
-#!/usr/bin/bash
-if pidof -sq swayidle; then
-	~/.bin/stopswayidle
-	notify-send "Disabled auto-lock" -a ""
-else
-	~/.bin/stopswayidle
-	~/.bin/startswayidle
-	notify-send "Enabled auto-lock" -a ""
-fi

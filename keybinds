@@ -1,0 +1,114 @@
+#!/usr/bin/bash
+[[ -e /tmp/keybindslockfile ]] && exit 1
+touch -- /tmp/keybindslockfile
+MOD=SUPER
+keybinds=(
+	"$MOD, Space, exec, true | wl-copy" # Clear clipboard
+	"$MOD, A, exec, \$HOME/.bin/emojiclip" # Emoji menu
+	"$MOD, B, exec, killall -SIGUSR1 waybar" # Toggle waybar
+	"$MOD, C, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy" # Clipboard history
+	"$MOD SHIFT, C, exec, true | wl-copy; cliphist wipe && notify-send 'cleared clipboard history' -a ''" # Clear clipboard history
+	"$MOD SHIFT, V, exec, ~/.bin/dictation" # Voice dictation, https://github.com/ideasman42/nerd-dictation, pain to setup so I'm not including it here
+	"$MOD, Z, exec, dunstctl history-pop" # Show last notification
+	"$MOD, L, exec, ~/.bin/lock y" # Lock screen
+	"$MOD SHIFT, L, exec, ~/.bin/toggle-autolock" # Toggle automatic screen-lock
+	"$MOD SHIFT, I, exec, pkill -RTMIN -x wvkbd-mobintl" # Toggle software keyboard
+	"$MOD, K, exec, ~/.bin/start-keepassxc" # Password manager
+	"CTRL ALT SUPER, Delete, exec, \$HOME/.bin/power" # Power menu
+	"$MOD, R, exec, rofi -show drun" # Application menu
+	"$MOD SHIFT, R, exec, rofi -show run"
+	"$MOD, N, exec, nemo" # File manager
+	"$MOD, T, exec, kitty" # Terminal emulator
+	"$MOD, Y, exec, librewolf" # Browser
+	"$MOD SHIFT, Y, exec, ~/.bin/open-qutebrowser" # Browser 2: Electric Boogaloo
+
+	# Backlight control
+	", XF86MonBrightnessUp, exec, swayosd-client --brightness raise"
+	", XF86MonBrightnessDown, exec, swayosd-client --brightness lower"
+
+	# Volume control
+	", XF86AudioRaiseVolume, exec, swayosd-client --output-volume +5"
+	", XF86AudioLowerVolume, exec, swayosd-client --output-volume -5"
+	", XF86AudioMute, exec, swayosd-client --output-volume mute-toggle"
+	", XF86AudioMicMute, exec, swayosd-client --input-volume mute-toggle"
+	"$MOD, KP_Up, exec, swayosd-client --output-volume +5"
+	"$MOD, KP_Begin, exec, swayosd-client --output-volume mute-toggle"
+	"$MOD, KP_Down, exec, swayosd-client --output-volume -5"
+
+	# Screenshot
+	", Print, exec, ~/.bin/screenshot area"
+	"CTRL, Print, exec, ~/.bin/screenshot active"
+	"ALT, Print, exec, ~/.bin/screenshot color"
+	"SHIFT, Print, exec, ~/.bin/screenshot monitor"
+	"CTRL SHIFT, Print, exec, ~/.bin/screenshot desktop"
+	"SUPER, Print, exec, notify-send -- $'\n-: selection\nCTRL: active window\nALT: color\nSHIFT: monitor\nCTRL SHIFT: all monitors'"
+
+	# Screenshot preview, scan QR code, or scan text with OCR
+	"$MOD, P, exec, ~/.bin/screenshot-preview"
+	"$MOD CTRL, P, exec, ~/.bin/screenshot-qr"
+	"$MOD SHIFT, P, exec, ~/.bin/screenshot-ocr"
+
+	# Calender
+	"$MOD, M, exec, orage"
+
+	# Image editor
+	"$MOD, G, exec, gimp"
+
+	# Toggle floating window
+	"$MOD, V, togglefloating"
+
+	# Make window fullscreen
+	"$MOD, F, fullscreen"
+
+	# Make window think it's fullscreen
+	"$MOD SHIFT, F, fakefullscreen"
+
+	# Workspaces
+	"$MOD, grave, workspace, 9"
+	"$MOD, Q, workspace, 10"
+	"$MOD, W, workspace, 11"
+	"$MOD, E, workspace, 12"
+	"$MOD SHIFT, grave, movetoworkspace, 9"
+	"$MOD SHIFT, Q, movetoworkspace, 10"
+	"$MOD SHIFT, W, movetoworkspace, 11"
+	"$MOD SHIFT, E, movetoworkspace, 12"
+	"$MOD, Tab, workspace, +1"
+	"$MOD SHIFT, Tab, workspace, -1"
+	"$MOD CTRL, Tab, movetoworkspace, +1"
+	"$MOD CTRL SHIFT, Tab, movetoworkspace, -1"
+	"ALT, Tab, cyclenext"
+	"ALT SHIFT, Tab, cyclenext, prev"
+	"$MOD, left, movefocus, l"
+	"$MOD, right, movefocus, r"
+	"$MOD, up, movefocus, u"
+	"$MOD, down, movefocus, d"
+	"$MOD SHIFT, left, movewindow, l"
+	"$MOD SHIFT, right, movewindow, r"
+	"$MOD SHIFT, up, movewindow, u"
+	"$MOD SHIFT, down, movewindow, d"
+)
+if [[ "$1" == "off" ]]; then
+	hyprctl keyword unbind "$MOD, Escape"
+	hyprctl keyword bind "$MOD, Escape, exec, ~/.bin/keybinds on"
+	hyprctl keyword general:col.active_border 0xfff38ba8
+fi
+if [[ "$1" == "off" ]] || [[ "$1" == "on" ]]; then
+	for keybind in "${keybinds[@]}"; do
+		hyprctl keyword unbind "$(cut -d, -f1,2 <<<"$keybind")"
+	done
+else
+	echo "Usage: keybinds <on|off>"
+	rm -- /tmp/keybindslockfile
+	exit 1
+fi
+if [[ "$1" == "on" ]]; then
+	hyprctl keyword unbind "$MOD, Escape"
+	hyprctl keyword bind "$MOD, Escape, exec, ~/.bin/keybinds off"
+	hyprctl keyword general:col.active_border 0xfff5c2e7
+
+	for keybind in "${keybinds[@]}"; do
+		hyprctl keyword bind "$keybind"
+	done
+fi
+rm -- /tmp/keybindslockfile
+exit 0

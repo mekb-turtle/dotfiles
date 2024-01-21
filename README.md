@@ -1,10 +1,12 @@
 <h2 align="center">
-🚀 mekb's dot files (incomplete)<br/><br/>
-<img src="assets/preview.png" alt="Preview"/>
+🚀 mekb's dot files (WIP)<br/><br/>
 </h2>
 
 #### [Hyprland](https://hyprland.org/) with [Catppuccin](https://github.com/catppuccin)
 
-Usage: clone repo with submodules, run `./install`
+Usage:
+- Clone repo with submodules
+- Run `./install`
+- Change configuration to your liking, e.g environment variables and monitor layout
 
-uses [dotbot](https://github.com/anishathalye/dotbot)
+Uses [dotbot](https://github.com/anishathalye/dotbot)

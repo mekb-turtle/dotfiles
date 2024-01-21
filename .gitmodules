@@ -1,7 +1,12 @@
 [submodule "dotbot"]
-	path = dotbot
+	path = submodules/dotbot
 	url = https://github.com/anishathalye/dotbot
-	ignore = dirty
 [submodule "catppuccin-hyprland"]
-	path = catppuccin-hyprland
+	path = submodules/catppuccin-hyprland
 	url = https://github.com/catppuccin/hyprland
+[submodule "emojipicker"]
+	path = submodules/emojipicker
+	url = https://github.com/mekb-turtle/emojipicker
+[submodule "screenshot.sh"]
+	path = submodules/screenshot.sh
+	url = https://gist.github.com/mekb-turtle/539c7dbdded90bc165ee760d78b2a60f
