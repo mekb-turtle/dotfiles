@@ -10,3 +10,13 @@ Usage:
 - Change configuration to your liking, e.g environment variables and monitor layout
 
 Uses [dotbot](https://github.com/anishathalye/dotbot)
+
+Packages to install:
+
+- `hyprland` `waybar` `dunst` `kitty` `rofi` `swaylock-effects` `swaybg` `libnotify` `glib2`
+- Screenshot util: `grim` `slurp` `wl-clipboard` `hyprpicker` `imagemagick` `jq` `tesseract` `zbar` https://github.com/mekb-turtle/foto
+- Background stuff: `pipewire{,-alsa,-audio,-jack,-pulse}` `wireplumber` `xdg-desktop-portal{,-hyprland}`
+- For power menu: https://github.com/mekb-turtle/do/ (add your user to the `do` group)
+- Auto-start keepassxc: `keepassxc` `ssh-agent`
+
+Also see my [neovim config](https://github.com/mekb-turtle/nvim)
