@@ -7,7 +7,7 @@ function disable-autolock() {
 }
 function enable-autolock() {
 	killswayidle
-	swayidle -w timeout 60 ~/.bin/launch-swaylock &
+	swayidle -w timeout 60 ~/.bin/lock &
 }
 if [[ "$1" == "on" ]]; then
 	enable-autolock

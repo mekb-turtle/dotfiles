@@ -4,4 +4,4 @@ RES="$(rofi -dmenu -p "Power" <<< $'Shutdown\nRestart\nLog Out\nLock')"
 if [[ "$RES" == "Shutdown" ]]; then kitty bash -c "echo 'Syncing filesystems...' && sync && echo 'Shutting down...' && sleep 2 && /usr/local/sbin/do shutdown" & disown; fi
 if [[ "$RES" == "Restart" ]]; then kitty bash -c "echo 'Syncing filesystems...' && sync && echo 'Restarting...' && sleep 2 && /usr/local/sbin/do restart" & disown; fi
 if [[ "$RES" == "Log Out" ]]; then hyprctl dispatch exit; fi
-if [[ "$RES" == "Lock" ]]; then ~/.bin/launch-swaylock; fi
+if [[ "$RES" == "Lock" ]]; then ~/.bin/lock; fi
