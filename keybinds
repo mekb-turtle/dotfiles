@@ -35,6 +35,12 @@ keybinds=(
 	"$MOD, KP_Begin, exec, swayosd-client --output-volume mute-toggle"
 	"$MOD, KP_Down, exec, swayosd-client --output-volume -5"
 
+	# Song control
+	", XF86AudioPlay, exec, mpc toggle"
+	", XF86AudioStop, exec, mpc stop"
+	", XF86AudioPrev, exec, mpc prev"
+	", XF86AudioNext, exec, mpc next"
+
 	# Screenshot
 	", Print, exec, ~/.bin/screenshot area"
 	"CTRL, Print, exec, ~/.bin/screenshot active"
