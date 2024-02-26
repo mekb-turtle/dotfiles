@@ -23,23 +23,23 @@ keybinds=(
 	"$MOD SHIFT, Y, exec, ~/.bin/open-qutebrowser" # Browser 2: Electric Boogaloo
 
 	# Backlight control
-	", XF86MonBrightnessUp, exec, swayosd-client --brightness raise"
-	", XF86MonBrightnessDown, exec, swayosd-client --brightness lower"
+	"l:, XF86MonBrightnessUp, exec, swayosd-client --brightness raise"
+	"l:, XF86MonBrightnessDown, exec, swayosd-client --brightness lower"
 
 	# Volume control
-	", XF86AudioRaiseVolume, exec, swayosd-client --output-volume +5"
-	", XF86AudioLowerVolume, exec, swayosd-client --output-volume -5"
-	", XF86AudioMute, exec, swayosd-client --output-volume mute-toggle"
-	", XF86AudioMicMute, exec, swayosd-client --input-volume mute-toggle"
-	"$MOD, KP_Up, exec, swayosd-client --output-volume +5"
-	"$MOD, KP_Begin, exec, swayosd-client --output-volume mute-toggle"
-	"$MOD, KP_Down, exec, swayosd-client --output-volume -5"
+	"l:, XF86AudioRaiseVolume, exec, swayosd-client --output-volume +5"
+	"l:, XF86AudioLowerVolume, exec, swayosd-client --output-volume -5"
+	"l:, XF86AudioMute, exec, swayosd-client --output-volume mute-toggle"
+	"l:, XF86AudioMicMute, exec, swayosd-client --input-volume mute-toggle"
+	"l:$MOD, KP_Up, exec, swayosd-client --output-volume +5"
+	"l:$MOD, KP_Begin, exec, swayosd-client --output-volume mute-toggle"
+	"l:$MOD, KP_Down, exec, swayosd-client --output-volume -5"
 
 	# Song control
-	", XF86AudioPlay, exec, mpc toggle"
-	", XF86AudioStop, exec, mpc stop"
-	", XF86AudioPrev, exec, mpc prev"
-	", XF86AudioNext, exec, mpc next"
+	"l:, XF86AudioPlay, exec, mpc toggle"
+	"l:, XF86AudioStop, exec, mpc stop"
+	"l:, XF86AudioPrev, exec, mpc prev"
+	"l:, XF86AudioNext, exec, mpc next"
 
 	# Screenshot
 	", Print, exec, ~/.bin/screenshot area"
@@ -47,7 +47,7 @@ keybinds=(
 	"ALT, Print, exec, ~/.bin/screenshot color"
 	"SHIFT, Print, exec, ~/.bin/screenshot monitor"
 	"CTRL SHIFT, Print, exec, ~/.bin/screenshot desktop"
-	"SUPER, Print, exec, notify-send -- $'\n-: selection\nCTRL: active window\nALT: color\nSHIFT: monitor\nCTRL SHIFT: all monitors'"
+	":SUPER, Print, exec, notify-send -- $'\n-: selection\nCTRL: active window\nALT: color\nSHIFT: monitor\nCTRL SHIFT: all monitors'"
 
 	# Screenshot preview, scan QR code, or scan text with OCR
 	"$MOD, P, exec, ~/.bin/screenshot-preview"
@@ -113,7 +113,12 @@ if [[ "$1" == "on" ]]; then
 	hyprctl keyword general:col.active_border 0xfff5c2e7
 
 	for keybind in "${keybinds[@]}"; do
-		hyprctl keyword bind "$keybind"
+		opts=""
+		if [[ "$keybind" == *":"* ]]; then
+			opts="$(cut -f1 -d":" <<< "$keybind")"
+			keybind="$(cut -f2- -d":" <<< "$keybind")"
+		fi
+		hyprctl keyword "bind$opts" "$keybind"
 	done
 fi
 rm -- /tmp/keybindslockfile
