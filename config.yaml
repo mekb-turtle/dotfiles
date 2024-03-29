@@ -13,6 +13,7 @@
   - ~/.config/hypr/themes/
   - ~/.config/dunst/
   - ~/.config/waybar/
+  - ~/.config/fontconfig/
   - ~/.bin/
 
 - link:
@@ -43,3 +44,4 @@
     ~/.config/hypr/conf: hyprland.conf.d
     ~/.config/waybar/config.jsonc: config/waybar/config.jsonc
     ~/.config/waybar/style.css: config/waybar/style.css
+    ~/.config/fontconfig/fonts.conf: config/fonts.conf
