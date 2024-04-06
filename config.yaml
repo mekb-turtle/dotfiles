@@ -34,6 +34,7 @@
     ~/.bin/screenshot-preview: scripts/screenshot-preview
     ~/.bin/screenshot-ocr: scripts/screenshot-ocr
     ~/.bin/screenshot-qr: scripts/screenshot-qr
+    ~/.bin/rewaybar: scripts/rewaybar
     ~/.bin/emoji: submodules/emojipicker/emoji
     ~/.bin/emojiclip: submodules/emojipicker/emojiclip
     ~/.config/hypr/themes/latte.conf: submodules/catppuccin-hyprland/themes/latte.conf

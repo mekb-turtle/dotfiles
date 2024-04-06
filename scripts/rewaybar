@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+killall waybar
+cd ~/.config/waybar/
+waybar 2>/dev/null >/dev/null &disown
