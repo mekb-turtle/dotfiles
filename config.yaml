@@ -14,6 +14,11 @@
   - ~/.config/dunst/
   - ~/.config/waybar/
   - ~/.config/fontconfig/
+  - ~/.config/rofi/
+  - ~/.local/
+  - ~/.local/share/
+  - ~/.local/share/rofi/
+  - ~/.local/share/rofi/themes/
   - ~/.bin/
 
 - link:
@@ -46,3 +51,8 @@
     ~/.config/waybar/config.jsonc: config/waybar/config.jsonc
     ~/.config/waybar/style.css: config/waybar/style.css
     ~/.config/fontconfig/fonts.conf: config/fonts.conf
+    ~/.config/rofi/config.rasi: config/rofi.rasi
+    ~/.local/share/rofi/themes/catppuccin-latte.rasi: submodules/catppuccin-rofi/basic/.local/share/rofi/themes/catppuccin-latte.rasi
+    ~/.local/share/rofi/themes/catppuccin-frappe.rasi: submodules/catppuccin-rofi/basic/.local/share/rofi/themes/catppuccin-frappe.rasi
+    ~/.local/share/rofi/themes/catppuccin-macchiato.rasi: submodules/catppuccin-rofi/basic/.local/share/rofi/themes/catppuccin-macchiato.rasi
+    ~/.local/share/rofi/themes/catppuccin-mocha.rasi: submodules/catppuccin-rofi/basic/.local/share/rofi/themes/catppuccin-mocha.rasi
