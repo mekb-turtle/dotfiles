@@ -25,8 +25,11 @@ listview {
   font: "Ubuntu 14";
 }
 prompt {
-  background-color: @pink;
+  background-color: @fg-col2;
 }
 button selected {
-  text-color: @pink;
+  text-color: @fg-col2;
+}
+textbox {
+  text-color: @fg-col;
 }
