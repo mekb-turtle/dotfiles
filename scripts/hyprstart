@@ -6,6 +6,5 @@ pipewire &
 pipewire-pulse &
 wireplumber &
 disown
-pactl unload-module module-null-sink
 sleep 2
 /usr/lib/xdg-desktop-portal &
