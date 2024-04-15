@@ -15,6 +15,10 @@
   - ~/.config/waybar/
   - ~/.config/fontconfig/
   - ~/.config/rofi/
+  - ~/.config/gtk-2.0/
+  - ~/.config/gtk-3.0/
+  - ~/.icons/
+  - ~/.icons/default/
   - ~/.local/
   - ~/.local/share/
   - ~/.local/share/rofi/
@@ -56,3 +60,8 @@
     ~/.local/share/rofi/themes/catppuccin-frappe.rasi: submodules/catppuccin-rofi/basic/.local/share/rofi/themes/catppuccin-frappe.rasi
     ~/.local/share/rofi/themes/catppuccin-macchiato.rasi: submodules/catppuccin-rofi/basic/.local/share/rofi/themes/catppuccin-macchiato.rasi
     ~/.local/share/rofi/themes/catppuccin-mocha.rasi: submodules/catppuccin-rofi/basic/.local/share/rofi/themes/catppuccin-mocha.rasi
+    ~/.config/gtk-2.0/gtkfilechooser.ini: config/gtkfilechooser.ini
+    ~/.config/gtk-2.0/gtkrc: config/gtkrc
+    ~/.config/gtk-3.0/gtkfilechooser.ini: config/gtkfilechooser.ini
+    ~/.config/gtk-3.0/settings.ini: config/gtksettings.ini
+    ~/.icons/default/index.theme: config/icons.theme

@@ -19,7 +19,8 @@ Packages to install:
 - For power menu: https://github.com/mekb-turtle/do/ (add your user to the `do` group)
 - Auto-start keepassxc: `keepassxc` `openssh` (ssh-agent)
 - Fonts: `ttf-fira-code` `ttf-fira-mono` `ttf-nerd-fonts-symbols` `ttf-nerd-fonts-symbols-mono` `ttf-twemoji` `ttf-ubuntu-font-family`
+- Theme: `catppuccin-gtk-theme-mocha` `papirus-folders-catppuccin-git`
 
-Command to install packages: `paru -S hyprland waybar dunst kitty rofi swaylock-effects swaybg libnotify glib2 grim slurp wl-clipboard hyprpicker imagemagick jq tesseract tesseract-data-eng zbar pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland keepassxc openssh ttf-fira-code ttf-fira-mono ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-twemoji ttf-ubuntu-font-family`
+Command to install packages: `paru -S hyprland waybar dunst kitty rofi swaylock-effects swaybg libnotify glib2 grim slurp wl-clipboard hyprpicker imagemagick jq tesseract tesseract-data-eng zbar pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland keepassxc openssh ttf-fira-code ttf-fira-mono ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-twemoji ttf-ubuntu-font-family catppuccin-gtk-theme-mocha papirus-folders-catppuccin-git`
 
 Also see my [neovim config](https://github.com/mekb-turtle/nvim)
