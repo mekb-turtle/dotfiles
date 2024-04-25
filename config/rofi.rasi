@@ -1,35 +1,35 @@
 configuration {
-  modi: "run,drun,filebrowser";
-  show-icons: true;
-  terminal: "alacritty";
-  drun-display-format: "{icon} {name}";
-  location: 0;
-  disable-history: false;
-  hide-scrollbar: false;
-  display-drun: "   Run ";
-  display-run: "  Shell ";
-  display-window: "   Window ";
-  display-network: " 󰤨  Network ";
-  display-filebrowser: "   Files ";
-  sidebar-mode: true;
+	modi: "run,drun,filebrowser";
+	show-icons: true;
+	terminal: "kitty";
+	drun-display-format: "{icon} {name}";
+	location: 0;
+	disable-history: false;
+	hide-scrollbar: false;
+	display-drun: "   Run ";
+	display-run: "  Shell ";
+	display-window: "   Window ";
+	display-network: " 󰤨  Network ";
+	display-filebrowser: "   Files ";
+	sidebar-mode: true;
 }
 
 @theme "catppuccin-mocha"
 
 listview {
-  columns: 1;
+	columns: 1;
 }
 * {
-  pink: #f5c2e7;
-  fg-col2: @pink;
-  font: "Ubuntu 14";
+	pink: #f5c2e7;
+	fg-col2: @pink;
+	font: "Ubuntu 14";
 }
 prompt {
-  background-color: @fg-col2;
+	background-color: @fg-col2;
 }
 button selected {
-  text-color: @fg-col2;
+	text-color: @fg-col2;
 }
 textbox {
-  text-color: @fg-col;
+	text-color: @fg-col;
 }
