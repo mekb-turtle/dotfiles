@@ -16,6 +16,9 @@ configuration {
 
 @theme "catppuccin-mocha"
 
+window {
+  height: 420px;
+}
 listview {
 	columns: 1;
 }
