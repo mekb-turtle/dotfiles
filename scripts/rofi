@@ -1,2 +1,2 @@
 #!/bin/sh
-(sleep 0.1; hyprctl dispatch focuswindow Rofi) & exec /bin/rofi "$@"
+(sleep 0.1; hyprctl dispatch focuswindow Rofi) >/dev/null 2>/dev/null & exec /bin/rofi "$@"
