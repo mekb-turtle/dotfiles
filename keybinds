@@ -5,7 +5,7 @@ MOD=SUPER
 keybinds=(
 	"$MOD CTRL, Space, exec, true | wl-copy" # Clear clipboard
 	"$MOD CTRL, C, exec, true | wl-copy" # Clear clipboard
-	"$MOD, A, exec, \$HOME/.bin/emojiclip" # Emoji menu
+	"$MOD, A, exec, \$HOME/.bin/emojiclip \$HOME/.bin/rofi" # Emoji menu
 	"$MOD, B, exec, if pidof -sq waybar; then killall -SIGUSR1 waybar; else ~/.bin/rewaybar; fi" # Toggle waybar
 	"$MOD, C, exec, cliphist list | ~/.bin/rofi -dmenu | cliphist decode | wl-copy" # Clipboard history
 	"$MOD SHIFT, C, exec, true | wl-copy; cliphist wipe && notify-send 'cleared clipboard history' -a ''" # Clear clipboard history
