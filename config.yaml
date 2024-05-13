@@ -33,6 +33,7 @@
     ~/.bin/power: scripts/power
     ~/.bin/lock: scripts/lock
     ~/.bin/toggle-autolock: scripts/toggle-autolock
+    ~/.bin/toggle-floating: scripts/toggle-floating
     ~/.bin/keybinds: keybinds
     ~/.bin/update-gtk: scripts/update-gtk
     ~/.bin/hyprstart: scripts/hyprstart

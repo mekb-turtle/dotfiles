@@ -62,7 +62,7 @@ keybinds=(
 	"$MOD, G, exec, gimp"
 
 	# Toggle floating window
-	"$MOD, V, togglefloating"
+	"$MOD, V, exec, ~/.bin/toggle-floating"
 
 	# Make window fullscreen
 	"$MOD, F, fullscreen"
