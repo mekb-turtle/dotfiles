@@ -1,10 +1,28 @@
 #!/bin/bash
-if ! pidof -sq swaylock; then
+LOCK=hyprlock
+function lock() {
+	local args
+	local y_args
 	args=()
-	if [[ "$1" == "y" || "$1" == "yes" ]]; then
-		args=(--grace-no-mouse --grace-no-touch --grace 1 --fade-in 0)
+	case "$LOCK" in
+	hyprlock)
+		y_args=(--immediate)
+		;;
+	swaylock)
+		y_args=(--grace 0 --fade-in 0)
+		;;
+	*)
+		echo "Unknown lock command: $LOCK" >&2
+		return 1
+		;;
+	esac
+	if ! pidof -sq "$LOCK"; then
+		if [[ "$1" == "y" || "$1" == "yes" ]]; then
+			args=("${y_args[@]}")
+		fi
+		dunstctl set-paused true
+		"$LOCK" "${args[@]}"
+		dunstctl set-paused false
 	fi
-	dunstctl set-paused true
-	swaylock "${args[@]}"
-	dunstctl set-paused false
-fi
+}
+lock "$@"

@@ -53,6 +53,7 @@
     ~/.config/hypr/themes/macchiato.conf: submodules/catppuccin-hyprland/themes/macchiato.conf
     ~/.config/hypr/themes/mocha.conf: submodules/catppuccin-hyprland/themes/mocha.conf
     ~/.config/hypr/hyprland.conf: hyprland.conf
+    ~/.config/hypr/hyprlock.conf: config/hyprlock.conf
     ~/.config/hypr/conf: hyprland.conf.d
     ~/.config/waybar/config.jsonc: config/waybar/config.jsonc
     ~/.config/waybar/style.css: config/waybar/style.css
