@@ -1,6 +1,6 @@
 #!/bin/bash
 function killswayidle() {
-	killall swayidle -q
+	killall -q swayidle -q
 }
 function disable-autolock() {
 	killswayidle

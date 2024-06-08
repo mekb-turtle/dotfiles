@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 [[ -e /tmp/keybindslockfile ]] && exit 1
 touch -- /tmp/keybindslockfile
 MOD=SUPER

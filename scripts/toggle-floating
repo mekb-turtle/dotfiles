@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 # Avoid race conditions by storing the address in a variable
 ACTIVE="$(hyprctl activewindow -j)"
 # Rofi crashes Hyprland when toggle floating

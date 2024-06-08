@@ -35,10 +35,10 @@
     ~/.bin/toggle-autolock: scripts/toggle-autolock
     ~/.bin/toggle-floating: scripts/toggle-floating
     ~/.bin/keybinds: keybinds
+    ~/.bin/rewallpaper: scripts/rewallpaper
+    ~/.bin/convert-wallpaper: scripts/convert-wallpaper
     ~/.bin/update-gtk: scripts/update-gtk
     ~/.bin/hyprstart: scripts/hyprstart
-    ~/.bin/rewallpaper: scripts/rewallpaper
-    ~/.bin/wallpaper: scripts/wallpaper
     ~/.bin/kill-window: scripts/kill-window
     ~/.bin/screenshot: submodules/screenshot.sh/screenshot.sh
     ~/.bin/screenshot-preview: scripts/screenshot-preview
@@ -54,6 +54,7 @@
     ~/.config/hypr/themes/mocha.conf: submodules/catppuccin-hyprland/themes/mocha.conf
     ~/.config/hypr/hyprland.conf: hyprland.conf
     ~/.config/hypr/hyprlock.conf: config/hyprlock.conf
+    ~/.config/hypr/hyprpaper.conf: config/hyprpaper.conf
     ~/.config/hypr/conf: hyprland.conf.d
     ~/.config/waybar/config.jsonc: config/waybar/config.jsonc
     ~/.config/waybar/style.css: config/waybar/style.css
