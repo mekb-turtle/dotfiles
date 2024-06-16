@@ -19,7 +19,8 @@ window#waybar>box>box {
     margin-right: 5px;
 }
 
-window#waybar>box>box>widget>*:not(#workspaces),
+window#waybar>box>box>widget>*:not(#workspaces):not(#window),
+window#waybar:not(.empty)>box>box>widget>#window,
 #workspaces>button {
     margin-left: 2px;
     margin-right: 2px;
