@@ -71,14 +71,21 @@ keybinds=(
 	"$MOD SHIFT, F, fakefullscreen"
 
 	# Workspaces
+	"$MOD CTRL, Q, workspace, 7"
+	"$MOD CTRL, W, workspace, 8"
+	"$MOD CTRL, E, workspace, 9"
 	"$MOD, grave, workspace, 9"
 	"$MOD, Q, workspace, 10"
 	"$MOD, W, workspace, 11"
 	"$MOD, E, workspace, 12"
+	"$MOD SHIFT CTRL, Q, movetoworkspace, 7"
+	"$MOD SHIFT CTRL, W, movetoworkspace, 8"
+	"$MOD SHIFT CTRL, E, movetoworkspace, 9"
 	"$MOD SHIFT, grave, movetoworkspace, 9"
 	"$MOD SHIFT, Q, movetoworkspace, 10"
 	"$MOD SHIFT, W, movetoworkspace, 11"
 	"$MOD SHIFT, E, movetoworkspace, 12"
+
 	"$MOD, Tab, workspace, +1"
 	"$MOD SHIFT, Tab, workspace, -1"
 	"$MOD CTRL, Tab, movetoworkspace, +1"
