@@ -5,9 +5,9 @@
 	// "width": 1280, // Waybar width
 	"spacing": 0, // Gaps between modules (4px)
 	// Choose the order of the modules
-	"modules-left": [ "custom/padding", "wlr/taskbar", "wlr/workspaces", "custom/padding" ],
+	"modules-left": [ "hyprland/window", "hyprland/workspaces"  ],
 	"modules-center": [ ],
-	"modules-right": [ "custom/padding", "battery", "mpd", "pulseaudio", "clock", "tray", "custom/padding" ],
+	"modules-right": [ "battery", "mpd", "pulseaudio", "clock", "tray" ],
 	//"output": [ "DP-2", "HDMI-A-1", "DP-1", "eDP-1" ],
 	// Modules configuration
 	// "sway/workspaces": {
@@ -35,10 +35,6 @@
 		"format-plugged": "{icon} {capacity}%",
 		"format-icons": [" ", " ", " ", " ", " "]
 	},
-	"custom/padding": {
-		"tooltip": false,
-		"format": " "
-	},
 	"mpd": {
 		"server": "/run/user/1000/mpd/socket",
 		"state-icons": { "playing": "▶️", "paused": "⏸️" },
@@ -56,17 +52,27 @@
 		"on-click-right": "xfmpc",
 		"on-click-middle": "pavucontrol"
 	},
-	"wlr/taskbar": {
-		"icon-theme": "Papirus",
+	"hyprland/window": {
+		"format": "{title}",
+		"icon": true,
 		"icon-size": 16,
-		"format": "{icon} {title}",
-		"active-first": false,
-		"on-click": "activate",
-		"on-click-right": "",
-		"on-click-middle": "fullscreen"
+		"separate-outputs": true,
+		"rewrite": {
+			"(.*) — Mozilla Firefox": "Firefox — $1",
+			"(.*) — LibreWolf": "LibreWolf — $1"
+		}
 	},
-	"wlr/workspaces": {
-		"on-click": "activate"
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"sort-by": "number",
+		"format-icons": {
+			"7": "^Q / 7",
+			"8": "^W / 8",
+			"9": "^E / 9",
+			"10": "Q / 10",
+			"11": "W / 11",
+			"12": "E / 12"
+		}
 	},
 	"clock": {
 		"interval": 1,
@@ -77,6 +83,7 @@
 			"mode": "year",
 			"mode-mon-col": 3,
 			"weeks-pos": "right",
+			"on-scroll": -1,
 			"format": {
 				"months": "<span color='#f9e2af'>{}</span>",
 				"days": "<span color='#89b4fa'>{}</span>",
@@ -84,6 +91,11 @@
 				"weekdays": "<span color='#fab387'>{}</span>",
 				"today": "<span color='#f5c2e7'><b><u>{}</u></b></span>"
 			}
+		},
+		"actions": {
+			"on-click-right": "mode",
+			"on-scroll-up": "shift_up",
+			"on-scroll-down": "shift_down"
 		}
 	},
 	"cpu": {
@@ -138,5 +150,3 @@
 		"on-click-right": "pavucontrol"
 	}
 }
-
-
