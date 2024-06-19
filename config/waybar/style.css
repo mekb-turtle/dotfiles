@@ -21,7 +21,7 @@ window#waybar>box>box {
 
 window#waybar>box>box>widget>*:not(#workspaces):not(#window),
 window#waybar:not(.empty)>box>box>widget>#window,
-#workspaces>button {
+window#waybar>box>box>widget>#workspaces>button {
     margin-left: 2px;
     margin-right: 2px;
     color: #cdd6f4;
@@ -35,6 +35,6 @@ window#waybar:not(.empty)>box>box>widget>#window,
     transition: background 0.5s, color 0.5s;
 }
 
-#workspaces>button.active {
+window#waybar>box>box>widget>#workspaces>button.active {
     background: linear-gradient(to top, #f5c2e7 0.5em, rgba(88, 91, 112, 0.2) 0.5em, rgba(0, 0, 0, 0.2) 100%);
 }
