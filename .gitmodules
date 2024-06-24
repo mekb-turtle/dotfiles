@@ -1,15 +1,18 @@
-[submodule "dotbot"]
-	path = submodules/dotbot
-	url = https://github.com/anishathalye/dotbot
-[submodule "catppuccin-hyprland"]
+[submodule "submodules/catppuccin-hyprland"]
 	path = submodules/catppuccin-hyprland
 	url = https://github.com/catppuccin/hyprland
-[submodule "emojipicker"]
-	path = submodules/emojipicker
-	url = https://github.com/mekb-turtle/emojipicker
-[submodule "screenshot.sh"]
-	path = submodules/screenshot.sh
-	url = https://gist.github.com/mekb-turtle/539c7dbdded90bc165ee760d78b2a60f
-[submodule "catppuccin-rofi"]
+[submodule "submodules/catppuccin-rofi"]
 	path = submodules/catppuccin-rofi
 	url = https://github.com/catppuccin/rofi
+[submodule "submodules/dotbot"]
+	path = submodules/dotbot
+	url = https://github.com/anishathalye/dotbot
+[submodule "submodules/emojipicker"]
+	path = submodules/emojipicker
+	url = https://github.com/mekb-turtle/emojipicker
+[submodule "submodules/screenshot.sh"]
+	path = submodules/screenshot.sh
+	url = https://gist.github.com/mekb-turtle/539c7dbdded90bc165ee760d78b2a60f
+[submodule "submodules/catppuccin-kvantum"]
+	path = submodules/catppuccin-kvantum
+	url = https://github.com/catppuccin/kvantum

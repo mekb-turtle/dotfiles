@@ -7,6 +7,7 @@
 
 - create:
   - ~/.config/
+  - ~/.config/Kvantum
   - ~/.config/swaylock/
   - ~/.config/kitty/
   - ~/.config/hypr/
@@ -26,6 +27,8 @@
   - ~/.bin/
 
 - link:
+    ~/.config/Kvantum/catppuccin: submodules/catppuccin-kvantum/themes/catppuccin-mocha-pink
+    ~/.config/Kvantum/kvantum.kvconfig: config/kvantum.kvconfig
     ~/.config/swaylock/config: config/swaylock.conf
     ~/.config/kitty/kitty.conf: config/kitty.conf
     ~/.config/dunst/dunstrc: config/dunstrc
