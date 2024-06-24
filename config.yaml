@@ -27,7 +27,7 @@
   - ~/.bin/
 
 - link:
-    ~/.config/Kvantum/catppuccin: submodules/catppuccin-kvantum/themes/catppuccin-mocha-pink
+    ~/.config/Kvantum/catppuccin-mocha-pink: submodules/catppuccin-kvantum/themes/catppuccin-mocha-pink
     ~/.config/Kvantum/kvantum.kvconfig: config/kvantum.kvconfig
     ~/.config/swaylock/config: config/swaylock.conf
     ~/.config/kitty/kitty.conf: config/kitty.conf
