@@ -100,10 +100,6 @@ keybinds=(
 	"$MOD SHIFT, right, movewindow, r"
 	"$MOD SHIFT, up, movewindow, u"
 	"$MOD SHIFT, down, movewindow, d"
-
-	# Caps/Num Lock indicator
-	":, code:66, exec, sleep 0.1 && swayosd-client --caps-lock"
-	":, code:77, exec, sleep 0.1 && swayosd-client --num-lock"
 )
 if [[ "$1" == "off" ]]; then
 	hyprctl keyword unbind "$MOD, Escape"
