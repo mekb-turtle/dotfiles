@@ -1,40 +1,40 @@
 * {
-    font-family: Ubuntu, sans-serif;
-    font-size: 12px;
+	font-family: Ubuntu, sans-serif;
+	font-size: 12px;
 }
 
 window#waybar {
-    background-color: transparent;
-    color: #cdd6f4;
-    transition-property: background-color;
-    transition-duration: .5s;
+	background-color: transparent;
+	color: #cdd6f4;
+	transition-property: background-color;
+	transition-duration: .5s;
 }
 
 button {
-    background-color: transparent;
+	background-color: transparent;
 }
 
 window#waybar>box>box {
-    margin-left: 5px;
-    margin-right: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 window#waybar>box>box>widget>*:not(#workspaces):not(#window),
 window#waybar:not(.empty)>box>box>widget>#window,
 window#waybar>box>box>widget>#workspaces>button {
-    margin-left: 2px;
-    margin-right: 2px;
-    color: #cdd6f4;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: none;
-    padding: 0 10px;
-    border-radius: 0 0 0.5em 0.5em;
+	margin-left: 2px;
+	margin-right: 2px;
+	color: #cdd6f4;
+	background-color: rgba(0, 0, 0, 0.2);
+	border: none;
+	padding: 0 10px;
+	border-radius: 0 0 0.5em 0.5em;
 }
 
 #workspaces>button {
-    transition: background 0.5s, color 0.5s;
+	transition: background 0.5s, color 0.5s;
 }
 
 window#waybar>box>box>widget>#workspaces>button.active {
-    background: linear-gradient(to top, #f5c2e7 0.5em, rgba(88, 91, 112, 0.2) 0.5em, rgba(0, 0, 0, 0.2) 100%);
+	background: linear-gradient(to top, #f5c2e7 0.5em, rgba(88, 91, 112, 0.2) 0.5em, rgba(0, 0, 0, 0.2) 100%);
 }
