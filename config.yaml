@@ -77,6 +77,6 @@
       force: true
     ~/.config/gtk-3.0/settings.ini: config/gtksettings.ini
     ~/.icons/default/index.theme: config/icons.theme
-    ~/.config/gtk-4.0/assets: /usr/share/themes/catppuccin-mocha-pink-standard+default/gtk-4.0/assets
-    ~/.config/gtk-4.0/gtk.css: /usr/share/themes/catppuccin-mocha-pink-standard+default/gtk-4.0/gtk.css
-    ~/.config/gtk-4.0/gtk-dark.css: /usr/share/themes/catppuccin-mocha-pink-standard+default/gtk-4.0/gtk-dark.css
+    ~/.config/gtk-4.0/assets: /usr/share/themes/Colloid-Pink-Dark-Catppuccin/gtk-4.0/assets
+    ~/.config/gtk-4.0/gtk.css: /usr/share/themes/Colloid-Pink-Dark-Catppuccin/gtk-4.0/gtk.css
+    ~/.config/gtk-4.0/gtk-dark.css: /usr/share/themes/Colloid-Pink-Dark-Catppuccin/gtk-4.0/gtk-dark.css
