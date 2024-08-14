@@ -15,7 +15,7 @@ Uses [dotbot](https://github.com/anishathalye/dotbot)
 
 Packages to install:
 
-- `hyprland` `waybar` `dunst` `kitty` `rofi` `hyprpaper` `libnotify` `glib2` `jq` `swayosd-git` `cliphist` `brightnessctl`
+- `hyprland` `waybar` `dunst` `kitty` `hyprpaper` `libnotify` `glib2` `jq` `swayosd-git` `cliphist` `brightnessctl`
 - Screenshot util: `grim` `slurp` `wl-clipboard` `hyprpicker` `imagemagick` `jq` `tesseract` `zbar` https://github.com/mekb-turtle/foto
 - Background stuff: `pipewire{,-alsa,-audio,-jack,-pulse}` `wireplumber` `xdg-desktop-portal{,-hyprland}`
 - For power menu: https://github.com/mekb-turtle/do/ (add your user to the `do` group)
@@ -25,6 +25,7 @@ Packages to install:
 - Theme: `colloid-catppuccin-gtk-theme-git` `papirus-folders-catppuccin-git` `catppuccin-cursors-mocha` `qt5ct` `qt6ct` `kvantum`
 - Lock screen: `hyprlock` or `swaylock-effects` (configure in `scripts/lock`) and `swayidle`
 - Additional applications: `nemo` `mpv` `feh` `librewolf` `gimp` `krita`
+- [`rofi-wayland`](https://github.com/lbonn/rofi) (wofi has lacking features)
 
 If you are using NVIDIA, apply the following patch to `hyprlock-git` instead of repo package.<details><summary>Show patch</summary>
 ```shell
@@ -39,7 +40,7 @@ If you are not using NVIDIA, remove the line `source=conf/env-nvidia.conf` in `h
 
 You will also need to adjust other config settings such as the monitor layout.
 
-Command to install packages: `paru -S hyprland waybar dunst kitty rofi swaylock-effects hyprlock hyprpaper libnotify glib2 grim slurp wl-clipboard hyprpicker imagemagick jq tesseract tesseract-data-eng zbar pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland keepassxc openssh ttf-fira-code ttf-fira-mono ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-twemoji ttf-ubuntu-font-family colloid-catppuccin-gtk-theme-git papirus-folders-catppuccin-git catppuccin-cursors-mocha qt5ct qt6ct kvantum swayosd-git cliphist nemo mpv feh librewolf gimp krita brightnessctl swayidle`,
+Command to install packages: `paru -S hyprland waybar dunst kitty swaylock-effects hyprlock hyprpaper libnotify glib2 grim slurp wl-clipboard hyprpicker imagemagick jq tesseract tesseract-data-eng zbar pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland keepassxc openssh ttf-fira-code ttf-fira-mono ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-twemoji ttf-ubuntu-font-family colloid-catppuccin-gtk-theme-git papirus-folders-catppuccin-git catppuccin-cursors-mocha qt5ct qt6ct kvantum swayosd-git cliphist nemo mpv feh librewolf gimp krita brightnessctl swayidle rofi-wayland`,
 then run `sudo papirus-folders -C cat-mocha-pink`
 
 Also see my [neovim config](https://github.com/mekb-turtle/nvim)

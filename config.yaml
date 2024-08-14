@@ -38,7 +38,6 @@
     ~/.bin/power: scripts/power
     ~/.bin/lock: scripts/lock
     ~/.bin/toggle-autolock: scripts/toggle-autolock
-    ~/.bin/toggle-floating: scripts/toggle-floating
     ~/.bin/keybinds: keybinds
     ~/.bin/rewallpaper: scripts/rewallpaper
     ~/.bin/convert-wallpaper: scripts/convert-wallpaper
@@ -50,7 +49,6 @@
     ~/.bin/screenshot-ocr: scripts/screenshot-ocr
     ~/.bin/screenshot-qr: scripts/screenshot-qr
     ~/.bin/rewaybar: scripts/rewaybar
-    ~/.bin/rofi: scripts/rofi
     ~/.bin/emoji: submodules/emojipicker/emoji
     ~/.bin/emojiclip: submodules/emojipicker/emojiclip
     ~/.config/hypr/themes/latte.conf: submodules/catppuccin-hyprland/themes/latte.conf

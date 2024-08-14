@@ -1,4 +1,0 @@
-#!/bin/sh
-# start rofi and then make the window focused
-# this is a hacky workaround because of how hyprland treats xwayland windows differently
-(sleep 0.1; hyprctl dispatch focuswindow Rofi) >/dev/null 2>/dev/null & exec /bin/rofi "$@"

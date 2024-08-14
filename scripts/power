@@ -1,6 +1,6 @@
 #!/bin/bash
 # Allow shutdown/restart without root user - https://github.com/mekb-turtle/do/blob/main/do.c
-RES="$(~/.bin/rofi -dmenu -p "Power" <<< $'Shutdown\nRestart\nLog Out\nLock' | grep -v ok)"
+RES="$(rofi -dmenu -p "Power" <<< $'Shutdown\nRestart\nLog Out\nLock' | grep -v ok)"
 if [[ "$RES" == "Shutdown" ]]; then kitty bash -c "echo 'Syncing filesystems...' && sync && echo 'Shutting down...' && sleep 2 && /usr/local/sbin/do shutdown" & disown; fi
 if [[ "$RES" == "Restart" ]]; then kitty bash -c "echo 'Syncing filesystems...' && sync && echo 'Restarting...' && sleep 2 && /usr/local/sbin/do restart" & disown; fi
 if [[ "$RES" == "Log Out" ]]; then hyprctl dispatch exit; fi
