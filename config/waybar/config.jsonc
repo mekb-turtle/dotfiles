@@ -8,7 +8,7 @@
 	"modules-left": [ "hyprland/window", "hyprland/workspaces"  ],
 	"modules-center": [ ],
 	"modules-right": [ "battery", "mpd", "pulseaudio", "clock", "tray" ],
-	//"output": [ "DP-3", "HDMI-A-2", "DP-1", "eDP-1" ],
+	//"output": [ "DP-2", "HDMI-A-1", "DP-1", "eDP-1" ],
 	// Modules configuration
 	// "sway/workspaces": {
 	//	 "disable-scroll": true,
