@@ -27,15 +27,6 @@ Packages to install:
 - Additional applications: `nemo` `mpv` `feh` `librewolf` `gimp` `krita`
 - [`rofi-wayland`](https://github.com/lbonn/rofi) (wofi has lacking features)
 
-If you are using NVIDIA, apply the following patch to `hyprlock-git` instead of repo package.<details><summary>Show patch</summary>
-```shell
-prepare() {
-    cd "${srcdir}/${_pkgname}"
-    sed -i -e "s/5000/16/g" src/core/hyprlock.cpp
-}
-```
-</details>
-
 If you are not using NVIDIA, remove the line `source=conf/env-nvidia.conf` in `hyprland.conf`.
 
 You will also need to adjust other config settings such as the monitor layout.
