@@ -20,7 +20,7 @@ keybinds=(
 	"$MOD SHIFT, R, exec, rofi -show run"
 	"$MOD, N, exec, nemo" # File manager
 	"$MOD, T, exec, kitty" # Terminal emulator
-	"$MOD, Y, exec, librewolf" # Browser
+	"$MOD, Y, exec, firefox" # Browser
 	"$MOD SHIFT, Y, exec, ~/.bin/open-qutebrowser" # Browser 2: Electric Boogaloo
 
 	# Backlight control

@@ -24,14 +24,14 @@ Packages to install:
 - Fonts: `ttf-fira-code` `ttf-fira-mono` `ttf-nerd-fonts-symbols` `ttf-nerd-fonts-symbols-mono` `ttf-twemoji` `ttf-ubuntu-font-family`
 - Theme: `colloid-catppuccin-gtk-theme-git` `papirus-folders-catppuccin-git` `catppuccin-cursors-mocha` `qt5ct` `qt6ct` `kvantum`
 - Lock screen: `hyprlock` or `swaylock-effects` (configure in `scripts/lock`) and `swayidle`
-- Additional applications: `nemo` `mpv` `feh` `librewolf` `gimp` `krita`
+- Additional applications: `nemo` `mpv` `feh` `firefox` `gimp` `krita`
 - [`rofi-wayland`](https://github.com/lbonn/rofi) (wofi has lacking features)
 
 If you are not using NVIDIA, remove the line `source=conf/env-nvidia.conf` in `hyprland.conf`.
 
 You will also need to adjust other config settings such as the monitor layout.
 
-Command to install packages: `paru -S hyprland waybar dunst kitty swaylock-effects hyprlock hyprpaper libnotify glib2 grim slurp wl-clipboard hyprpicker imagemagick jq tesseract tesseract-data-eng zbar pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland keepassxc openssh ttf-fira-code ttf-fira-mono ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-twemoji ttf-ubuntu-font-family colloid-catppuccin-gtk-theme-git papirus-folders-catppuccin-git catppuccin-cursors-mocha qt5ct qt6ct kvantum swayosd-git cliphist nemo mpv feh librewolf gimp krita brightnessctl swayidle rofi-wayland`,
+Command to install packages: `paru -S hyprland waybar dunst kitty swaylock-effects hyprlock hyprpaper libnotify glib2 grim slurp wl-clipboard hyprpicker imagemagick jq tesseract tesseract-data-eng zbar pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland keepassxc openssh ttf-fira-code ttf-fira-mono ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-twemoji ttf-ubuntu-font-family colloid-catppuccin-gtk-theme-git papirus-folders-catppuccin-git catppuccin-cursors-mocha qt5ct qt6ct kvantum swayosd-git cliphist nemo mpv feh firefox gimp krita brightnessctl swayidle rofi-wayland`,
 then run `sudo papirus-folders -C cat-mocha-pink`
 
 Also see my [neovim config](https://github.com/mekb-turtle/nvim)
