@@ -19,12 +19,12 @@ convert() {
 		echo "Monitor $2 not found"
 		return 1
 	fi
-	magick "$1" -gravity center -resize "$val"^ -extent "$val" "$3" && echo "Converted $1 to $3 with size $val"
+	magick -density 300 "$1" -gravity center -resize "$val"^ -extent "$val" "$3" && echo "Converted $1 to $3 with size $val"
 }
 
 # change the images and monitors to your needs
-convert ~/.wallpapers/1.png HDMI-A-1 ~/.wallpapers/1-adjusted.png
-convert ~/.wallpapers/2.png DP-2     ~/.wallpapers/2-adjusted.png
-convert ~/.wallpapers/3.png eDP-1    ~/.wallpapers/3-adjusted.png
+convert ~/.wallpapers/1 HDMI-A-1 ~/.wallpapers/1-adjusted.png
+convert ~/.wallpapers/2 DP-2     ~/.wallpapers/2-adjusted.png
+convert ~/.wallpapers/3 eDP-1    ~/.wallpapers/3-adjusted.png
 
 rewallpaper # update the wallpapers
