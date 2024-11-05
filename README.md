@@ -22,16 +22,18 @@ Packages to install:
   - This tool is used to run power commands as root without password
 - Auto-start keepassxc: `keepassxc` `openssh` (ssh-agent)
 - Fonts: `ttf-fira-code` `ttf-fira-mono` `ttf-nerd-fonts-symbols` `ttf-nerd-fonts-symbols-mono` `ttf-twemoji` `ttf-ubuntu-font-family`
-- Theme: `colloid-catppuccin-gtk-theme-git` `papirus-folders-catppuccin-git` `catppuccin-cursors-mocha` `qt5ct` `qt6ct` `kvantum`
+- Theme: `catppuccin-gtk-theme-mocha` `papirus-folders-catppuccin-git` `catppuccin-cursors-mocha` `qt5ct` `qt6ct` `kvantum`
 - Lock screen: `hyprlock`, `hypridle`, and `elogind`
 - Additional applications: `nemo` `mpv` `feh` `firefox` `gimp` `krita`
+  - GIMP is migrating to GTK3 in GIMP 3.0, along with other changes, so you may want to use the `gimp-git` package if you want that now
+  - Run `sed -i 's/-Dworkshop=true/-Dworkshop=false/' PKGBUILD` when building `gegl-git` to fix compilation errors
 - [`rofi-wayland`](https://github.com/lbonn/rofi) (wofi has lacking features)
 
 If you are not using NVIDIA, remove the line `source=conf/env-nvidia.conf` in `hyprland.conf`.
 
 You will also need to adjust other config settings such as the monitor layout.
 
-Command to install packages: `paru -S hyprland waybar dunst kitty hyprlock hyprpaper libnotify glib2 grim slurp wl-clipboard hyprpicker imagemagick jq tesseract tesseract-data-eng zbar pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland keepassxc openssh ttf-fira-code ttf-fira-mono ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-twemoji ttf-ubuntu-font-family colloid-catppuccin-gtk-theme-git papirus-folders-catppuccin-git catppuccin-cursors-mocha qt5ct qt6ct kvantum swayosd-git cliphist nemo mpv feh firefox gimp krita brightnessctl hypridle elogind rofi-wayland`,
+Command to install packages: `paru -S hyprland waybar dunst kitty hyprlock hyprpaper libnotify glib2 grim slurp wl-clipboard hyprpicker imagemagick jq tesseract tesseract-data-eng zbar pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland keepassxc openssh ttf-fira-code ttf-fira-mono ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-twemoji ttf-ubuntu-font-family catppuccin-gtk-theme-mocha papirus-folders-catppuccin-git catppuccin-cursors-mocha qt5ct qt6ct kvantum swayosd-git cliphist nemo mpv feh firefox gimp krita brightnessctl hypridle elogind rofi-wayland`,
 then run `sudo papirus-folders -C cat-mocha-pink`
 
 Also see my [neovim config](https://github.com/mekb-turtle/nvim)
