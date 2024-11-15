@@ -34,7 +34,6 @@
     ~/.config/dunst/dunstrc: config/dunstrc
     ~/.bin/start-keepassxc: scripts/start-keepassxc
     ~/.bin/power: scripts/power
-    ~/.bin/lock: scripts/lock
     ~/.bin/keybinds: keybinds
     ~/.bin/rewallpaper: scripts/rewallpaper
     ~/.bin/convert-wallpaper: scripts/convert-wallpaper
