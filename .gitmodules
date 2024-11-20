@@ -10,9 +10,9 @@
 [submodule "submodules/emojipicker"]
 	path = submodules/emojipicker
 	url = https://github.com/mekb-turtle/emojipicker
-[submodule "submodules/screenshot.sh"]
-	path = submodules/screenshot.sh
-	url = https://gist.github.com/mekb-turtle/539c7dbdded90bc165ee760d78b2a60f
+[submodule "submodules/hyprland-screenshot"]
+	path = submodules/hyprland-screenshot
+	url = https://github.com/mekb-turtle/hyprland-screenshot
 [submodule "submodules/catppuccin-kvantum"]
 	path = submodules/catppuccin-kvantum
 	url = https://github.com/catppuccin/kvantum

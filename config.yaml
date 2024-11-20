@@ -48,7 +48,7 @@
 
     ~/.bin/rewaybar: scripts/rewaybar
 
-    ~/.bin/screenshot: submodules/screenshot.sh/screenshot.sh
+    ~/.bin/screenshot: submodules/hyprland-screenshot/screenshot.sh
 
     ~/.bin/screenshot-ocr: scripts/screenshot-ocr
 
