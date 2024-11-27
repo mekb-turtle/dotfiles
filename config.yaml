@@ -64,7 +64,9 @@
 
     ~/.config/Kvantum/kvantum.kvconfig: config/kvantum.kvconfig
 
-    ~/.config/cava/config: config/cava.conf
+    ~/.config/cava/config:
+      force: yes
+      path: config/cava.conf
 
     ~/.config/dunst/dunstrc: config/dunstrc
 
