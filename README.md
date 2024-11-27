@@ -5,7 +5,9 @@
 #### [Hyprland](https://hyprland.org/) with [Catppuccin](https://github.com/catppuccin). Uses [dotbot](https://github.com/anishathalye/dotbot).
 
 > [!IMPORTANT]
-> These are my personal dotfiles and are not intended to be used by others. They are provided as-is and may not work on your system. If you really want to use these, you will need to edit many files such as monitor config, you can create a personal fork and sync changes with git merge. Use at your own risk.
+> These are my personal dotfiles and are not intended to be used by others. They are provided as-is and may not work on your system.
+> 
+> If you really want to use these, you will need to edit many files such as monitor config. You can create a personal fork and sync changes with git merge. Use at your own risk.
 
 
 ### Installation:
