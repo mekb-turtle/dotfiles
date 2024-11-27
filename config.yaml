@@ -1,6 +1,8 @@
 - shell:
     - - git submodule update --init --recursive
       - Installing submodules
+    - - touch ~/.config/hypr/hyprland-custom.conf
+      - Creating custom Hyprland configuration file
 
 - defaults:
     link:
