@@ -71,10 +71,11 @@ keybinds=(
 	"$MOD, V, togglefloating"
 
 	# Make window fullscreen
-	"$MOD, F, fullscreen"
+	"$MOD, F, fullscreenstate, 3 3"
 
-	# Make window think it's fullscreen
-	"$MOD SHIFT, F, fakefullscreen"
+	"$MOD SHIFT, F, fullscreenstate, 3 -1" # Toggle actual fullscreen (window doesn't realise)
+	"$MOD CTRL, F, fullscreenstate, -1 3" # Toggle fake fullscreen (window realises, but doesn't actually)
+	"$MOD CTRL SHIFT, F, fullscreenstate, 3 3" # Toggle both
 
 	# Workspaces
 	$(workspace "" "1" "1")
