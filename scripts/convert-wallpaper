@@ -25,6 +25,6 @@ convert() {
 # change the images and monitors to your needs
 convert ~/.wallpapers/1 HDMI-A-1 ~/.wallpapers/1-adjusted.png
 convert ~/.wallpapers/2 DP-2     ~/.wallpapers/2-adjusted.png
-convert ~/.wallpapers/3 eDP-1    ~/.wallpapers/3-adjusted.png
+convert ~/.wallpapers/3 DP-1     ~/.wallpapers/3-adjusted.png
 
 rewallpaper # update the wallpapers

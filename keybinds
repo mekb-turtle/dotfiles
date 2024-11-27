@@ -2,6 +2,12 @@
 [[ -e /tmp/keybindslockfile ]] && exit 1
 touch -- /tmp/keybindslockfile
 MOD=SUPER
+function workspace() {
+	echo "$MOD${1:+" "}$1, $2, workspace, $3"
+	echo "$MOD SHIFT${1:+" "}$1, $2, movetoworkspace, $3"
+}
+IFS=$'\n'
+# shellcheck disable=SC2207
 keybinds=(
 	"$MOD CTRL, Space, exec, true | wl-copy" # Clear clipboard
 	"$MOD CTRL, C, exec, true | wl-copy" # Clear clipboard
@@ -71,20 +77,40 @@ keybinds=(
 	"$MOD SHIFT, F, fakefullscreen"
 
 	# Workspaces
-	"$MOD CTRL, Q, workspace, 7"
-	"$MOD CTRL, W, workspace, 8"
-	"$MOD CTRL, E, workspace, 9"
-	"$MOD, grave, workspace, 9"
-	"$MOD, Q, workspace, 10"
-	"$MOD, W, workspace, 11"
-	"$MOD, E, workspace, 12"
-	"$MOD SHIFT CTRL, Q, movetoworkspace, 7"
-	"$MOD SHIFT CTRL, W, movetoworkspace, 8"
-	"$MOD SHIFT CTRL, E, movetoworkspace, 9"
-	"$MOD SHIFT, grave, movetoworkspace, 9"
-	"$MOD SHIFT, Q, movetoworkspace, 10"
-	"$MOD SHIFT, W, movetoworkspace, 11"
-	"$MOD SHIFT, E, movetoworkspace, 12"
+	$(workspace "" "1" "1")
+	$(workspace "" "2" "2")
+	$(workspace "" "3" "3")
+	$(workspace "" "4" "4")
+	$(workspace "" "5" "5")
+	$(workspace "" "6" "6")
+
+	$(workspace "" "0" "10")
+	$(workspace "" "Q" "10")
+	$(workspace "" "minus" "11")
+	$(workspace "" "W" "11")
+	$(workspace "" "equal" "12")
+	$(workspace "" "E" "12")
+
+	$(workspace "" "7" "7")
+	$(workspace "CTRL" "Q" "7")
+	$(workspace "" "8" "8")
+	$(workspace "CTRL" "W" "8")
+	$(workspace "" "9" "9")
+	$(workspace "CTRL" "E" "9")
+	$(workspace "" "grave" "9")
+
+	$(workspace "CTRL" "1" "13")
+	$(workspace "CTRL" "2" "14")
+	$(workspace "CTRL" "3" "15")
+	$(workspace "CTRL" "4" "16")
+	$(workspace "CTRL" "5" "17")
+	$(workspace "CTRL" "6" "18")
+	$(workspace "CTRL" "7" "19")
+	$(workspace "CTRL" "8" "20")
+	$(workspace "CTRL" "9" "21")
+	$(workspace "CTRL" "0" "22")
+	$(workspace "CTRL" "minus" "23")
+	$(workspace "CTRL" "equal" "24")
 
 	"$MOD, Tab, workspace, +1"
 	"$MOD SHIFT, Tab, workspace, -1"
