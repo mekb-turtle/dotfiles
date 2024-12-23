@@ -3,4 +3,4 @@ wl-paste -t image/png > /tmp/copyimg || exit "$?"
 IFS=",x " read -ra parts <<< "$(identify -format "%[geometry]" /tmp/copyimg)"
 args=()
 if [[ "${#parts[@]}" -gt 0 ]]; then args=(-p "${parts[0]},${parts[1]}" -s "${parts[2]},${parts[3]}"); fi
-foto /tmp/copyimg "${args[@]}"
+foto /tmp/copyimg # TODO: "${args[@]}"
