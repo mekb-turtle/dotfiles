@@ -29,6 +29,7 @@
     - ~/.local/share/rofi/themes/
     - ~/.config/cava/
     - ~/.bin/
+    - ~/.bin/emojipicker/
 
 - link:
 
@@ -37,6 +38,8 @@
     ~/.bin/emoji: submodules/emojipicker/emoji
 
     ~/.bin/emojiclip: submodules/emojipicker/emojiclip
+
+    ~/.bin/emojipicker/emojis: submodules/emojipicker/emojis
 
     ~/.bin/hyprstart: scripts/hyprstart
 
