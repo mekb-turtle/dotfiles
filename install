@@ -2,6 +2,8 @@
 
 set -e
 
+export CTP_THEME=mocha-pink
+
 CONFIG="config.yaml"
 DOTBOT_DIR="submodules/dotbot"
 

@@ -16,3 +16,6 @@
 [submodule "submodules/catppuccin-kvantum"]
 	path = submodules/catppuccin-kvantum
 	url = https://github.com/catppuccin/kvantum
+[submodule "submodules/catppuccin-qt5ct"]
+	path = submodules/catppuccin-qt5ct
+	url = https://github.com/catppuccin/qt5ct

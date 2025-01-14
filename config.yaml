@@ -3,11 +3,11 @@
       - Installing submodules
     - - touch ~/.config/hypr/hyprland-custom.conf
       - Creating custom Hyprland configuration file
-
+    - - 'if ! test -e ~/.config/keepassxc/keepassxc.ini; then install -Dm644 config/keepassxc.ini ~/.config/keepassxc/keepassxc.ini; fi'
+      - Installing KeePassXC configuration file
 - defaults:
     link:
       relink: yes
-
 - create:
     - ~/.config/
     - ~/.config/Kvantum
@@ -30,109 +30,63 @@
     - ~/.config/cava/
     - ~/.bin/
     - ~/.bin/emojipicker/
-
 - link:
-
     ~/.bin/convert-wallpaper: scripts/convert-wallpaper
-
     ~/.bin/emoji: submodules/emojipicker/emoji
-
     ~/.bin/emojiclip: submodules/emojipicker/emojiclip
-
     ~/.bin/emojipicker/emojis: submodules/emojipicker/emojis
-
     ~/.bin/hyprstart: scripts/hyprstart
-
     ~/.bin/keybinds: keybinds
-
     ~/.bin/kill-window: scripts/kill-window
-
     ~/.bin/power: scripts/power
-
     ~/.bin/rewallpaper: scripts/rewallpaper
-
     ~/.bin/rewaybar: scripts/rewaybar
-
     ~/.bin/screenshot: submodules/hyprland-screenshot/screenshot.sh
-
     ~/.bin/screenshot-ocr: scripts/screenshot-ocr
-
     ~/.bin/screenshot-preview: scripts/screenshot-preview
-
     ~/.bin/screenshot-qr: scripts/screenshot-qr
-
     ~/.bin/start-keepassxc: scripts/start-keepassxc
-
     ~/.bin/update-gtk: scripts/update-gtk
-
-    ~/.config/Kvantum/catppuccin-mocha-pink: submodules/catppuccin-kvantum/themes/catppuccin-mocha-pink
-
+    ~/.config/qt5ct/qt5ct.conf: config/qt5ct.conf
+    ~/.config/qt6ct/qt6ct.conf: config/qt6ct.conf
+    ~/.config/qt5ct/colors/catppuccin-$CTP_THEME.conf: submodules/catppuccin-qt5ct/themes/catppuccin-$CTP_THEME.conf
+    ~/.config/qt6ct/colors/catppuccin-$CTP_THEME.conf: submodules/catppuccin-qt5ct/themes/catppuccin-$CTP_THEME.conf
+    ~/.config/Kvantum/catppuccin-$CTP_THEME: submodules/catppuccin-kvantum/themes/catppuccin-$CTP_THEME
     ~/.config/Kvantum/kvantum.kvconfig: config/kvantum.kvconfig
-
     ~/.config/cava/config:
       force: yes
       path: config/cava.conf
-
     ~/.config/dunst/dunstrc: config/dunstrc
-
     ~/.config/fontconfig/fonts.conf: config/fonts.conf
-
     ~/.config/gtk-2.0/gtkfilechooser.ini:
       force: yes
       path: config/gtkfilechooser.ini
-
     ~/.config/gtk-2.0/gtkrc: config/gtkrc
-
-    ~/.config/gtk-3.0/assets: /usr/share/themes/catppuccin-mocha-pink-standard+default/gtk-3.0/assets
-
-    ~/.config/gtk-3.0/gtk-dark.css: /usr/share/themes/catppuccin-mocha-pink-standard+default/gtk-3.0/gtk-dark.css
-
-    ~/.config/gtk-3.0/gtk.css: /usr/share/themes/catppuccin-mocha-pink-standard+default/gtk-3.0/gtk.css
-
+    ~/.config/gtk-3.0/assets: /usr/share/themes/catppuccin-$CTP_THEME-standard+default/gtk-3.0/assets
+    ~/.config/gtk-3.0/gtk-dark.css: /usr/share/themes/catppuccin-$CTP_THEME-standard+default/gtk-3.0/gtk-dark.css
+    ~/.config/gtk-3.0/gtk.css: /usr/share/themes/catppuccin-$CTP_THEME-standard+default/gtk-3.0/gtk.css
     ~/.config/gtk-3.0/gtkfilechooser.ini:
       force: yes
       path: config/gtkfilechooser.ini
-
     ~/.config/gtk-3.0/settings.ini: config/gtksettings.ini
-
-    ~/.config/gtk-4.0/assets: /usr/share/themes/catppuccin-mocha-pink-standard+default/gtk-4.0/assets
-
-    ~/.config/gtk-4.0/gtk-dark.css: /usr/share/themes/catppuccin-mocha-pink-standard+default/gtk-4.0/gtk-dark.css
-
-    ~/.config/gtk-4.0/gtk.css: /usr/share/themes/catppuccin-mocha-pink-standard+default/gtk-4.0/gtk.css
-
+    ~/.config/gtk-4.0/assets: /usr/share/themes/catppuccin-$CTP_THEME-standard+default/gtk-4.0/assets
+    ~/.config/gtk-4.0/gtk-dark.css: /usr/share/themes/catppuccin-$CTP_THEME-standard+default/gtk-4.0/gtk-dark.css
+    ~/.config/gtk-4.0/gtk.css: /usr/share/themes/catppuccin-$CTP_THEME-standard+default/gtk-4.0/gtk.css
     ~/.config/hypr/conf: hyprland.conf.d
-
     ~/.config/hypr/hypridle.conf: config/hypridle.conf
-
     ~/.config/hypr/hyprland.conf: hyprland.conf
-
     ~/.config/hypr/hyprlock.conf: config/hyprlock.conf
-
     ~/.config/hypr/hyprpaper.conf: config/hyprpaper.conf
-
     ~/.config/hypr/themes/frappe.conf: submodules/catppuccin-hyprland/themes/frappe.conf
-
     ~/.config/hypr/themes/latte.conf: submodules/catppuccin-hyprland/themes/latte.conf
-
     ~/.config/hypr/themes/macchiato.conf: submodules/catppuccin-hyprland/themes/macchiato.conf
-
     ~/.config/hypr/themes/mocha.conf: submodules/catppuccin-hyprland/themes/mocha.conf
-
     ~/.config/kitty/kitty.conf: config/kitty.conf
-
     ~/.config/rofi/config.rasi: config/rofi.rasi
-
     ~/.config/waybar/config.jsonc: config/waybar/config.jsonc
-
     ~/.config/waybar/style.css: config/waybar/style.css
-
     ~/.icons/default/index.theme: config/icons.theme
-
     ~/.local/share/rofi/themes/catppuccin-frappe.rasi: submodules/catppuccin-rofi/basic/.local/share/rofi/themes/catppuccin-frappe.rasi
-
     ~/.local/share/rofi/themes/catppuccin-latte.rasi: submodules/catppuccin-rofi/basic/.local/share/rofi/themes/catppuccin-latte.rasi
-
     ~/.local/share/rofi/themes/catppuccin-macchiato.rasi: submodules/catppuccin-rofi/basic/.local/share/rofi/themes/catppuccin-macchiato.rasi
-
     ~/.local/share/rofi/themes/catppuccin-mocha.rasi: submodules/catppuccin-rofi/basic/.local/share/rofi/themes/catppuccin-mocha.rasi
