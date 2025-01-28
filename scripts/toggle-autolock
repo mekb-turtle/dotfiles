@@ -1,0 +1,15 @@
+#!/bin/bash
+set -euo pipefail
+set -f
+IFS=$'\n'
+if PIDS="$(~/.bin/hypr-search-proc.pl hypridle)"; then
+	kill -- $PIDS
+	echo "Automatic locking disabled"
+	notify-send "Automatic locking disabled"
+else
+	hypridle &
+	disown
+	notify-send "Automatic locking enabled"
+	sleep 1
+	echo "Automatic locking enabled"
+fi

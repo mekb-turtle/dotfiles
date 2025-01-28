@@ -14,7 +14,7 @@
 1. Clone the repo: `git clone https://github.com/mekb-turtle/dotfiles`
 2. Run the following command to install the required packages with [Paru](https://github.com/Morganamilo/paru), or [you can install them manually, see the list below](#packages-to-install)
 
-    -     paru -S hyprland hyprland-qtutils waybar dunst kitty hyprlock hyprpaper libnotify glib2 grim slurp wl-clipboard hyprpicker imagemagick jq tesseract tesseract-data-eng zbar pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland keepassxc openssh ttf-fira-code ttf-fira-mono ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-twemoji ttf-ubuntu-font-family catppuccin-gtk-theme-mocha papirus-folders-catppuccin-git catppuccin-cursors-mocha qt5ct qt6ct kvantum swayosd-git cliphist nemo mpv feh firefox gimp krita brightnessctl hypridle elogind rofi-wayland darkly
+    -     paru -S hyprland hyprland-qtutils waybar dunst kitty hyprlock hyprpaper libnotify glib2 grim slurp wl-clipboard hyprpicker imagemagick jq tesseract tesseract-data-eng zbar pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland keepassxc openssh ttf-fira-code ttf-fira-mono ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-twemoji ttf-ubuntu-font-family catppuccin-gtk-theme-mocha papirus-folders-catppuccin-git catppuccin-cursors-mocha qt5ct qt6ct kvantum swayosd-git cliphist nemo mpv feh firefox gimp krita brightnessctl hypridle elogind rofi-wayland darkly perl
 
 3. Run the following command to install Papirus folder icons:
 
@@ -40,7 +40,7 @@
 - Fonts: `ttf-fira-code` `ttf-fira-mono` `ttf-nerd-fonts-symbols` `ttf-nerd-fonts-symbols-mono` `ttf-twemoji` `ttf-ubuntu-font-family`
 - Theme: `catppuccin-gtk-theme-mocha` `papirus-folders-catppuccin-git` `catppuccin-cursors-mocha` `qt5ct` `qt6ct` `kvantum` `darkly`
 - Lock screen: `hyprlock`, `hypridle`, and `elogind`
-- Additional applications: `nemo` `mpv` `feh` `firefox` `gimp` `krita`
+- Additional applications: `nemo` `mpv` `feh` `firefox` `gimp` `krita` `perl`
   - GIMP is migrating to GTK3 in GIMP 3.0, along with other changes, so you may want to use the `gimp-git` package if you want that now
   - Run `sed -i 's/-Dworkshop=true/-Dworkshop=false/' PKGBUILD` when building `gegl-git` to fix compilation errors
 - [`rofi-wayland`](https://github.com/lbonn/rofi) (wofi has lacking features)

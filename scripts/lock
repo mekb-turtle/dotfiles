@@ -1,0 +1,3 @@
+#!/bin/bash
+~/.bin/hypr-search-proc.pl -s -q hypridle || notify-send "Automatic locking enabled"
+loginctl lock-session
