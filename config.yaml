@@ -39,12 +39,12 @@
     ~/.bin/ctp-rofi: scripts/ctp-rofi
     ~/.bin/lock: scripts/lock
     ~/.bin/toggle-autolock: scripts/toggle-autolock
+    ~/.bin/toggle-waybar: scripts/toggle-waybar
     ~/.bin/hypr-search-proc.pl: scripts/hypr-search-proc.pl
     ~/.bin/keybinds: keybinds
     ~/.bin/kill-window: scripts/kill-window
     ~/.bin/power: scripts/power
     ~/.bin/rewallpaper: scripts/rewallpaper
-    ~/.bin/rewaybar: scripts/rewaybar
     ~/.bin/screenshot: submodules/hyprland-screenshot/screenshot.sh
     ~/.bin/screenshot-ocr: scripts/screenshot-ocr
     ~/.bin/screenshot-preview: scripts/screenshot-preview
