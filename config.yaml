@@ -36,6 +36,7 @@
     ~/.bin/emojiclip: submodules/emojipicker/emojiclip
     ~/.bin/emojipicker/emojis: submodules/emojipicker/emojis
     ~/.bin/hyprstart: scripts/hyprstart
+    ~/.bin/ctp-rofi: scripts/ctp-rofi
     ~/.bin/lock: scripts/lock
     ~/.bin/toggle-autolock: scripts/toggle-autolock
     ~/.bin/hypr-search-proc.pl: scripts/hypr-search-proc.pl

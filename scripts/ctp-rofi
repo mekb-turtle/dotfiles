@@ -1,0 +1,82 @@
+#!/bin/bash
+# This code is a mess lol
+function ctp-rofi() {
+	set -euo pipefail
+	local file json palette disp_palette color format col out palettes FUNC
+	local -a list display
+	function dmenu-func() {
+		local ret
+		rofi -dmenu "$@" || {
+			# return 0 on cancel
+			ret="$?"
+			if [[ "$ret" == 1 ]]; then
+				return 0
+			fi
+			return "$ret"
+		}
+	}
+	file="${XDG_CACHE_HOME:-$HOME/.cache}/catppuccin-palette.json"
+	[[ -f $file ]] || {
+		curl -sL https://github.com/catppuccin/palette/raw/refs/heads/main/palette.json >"$file"
+	}
+	json="$(<"$file")"
+
+	FUNC=""
+	FUNC="$FUNC"'def h: .[1:];'
+	FUNC="$FUNC"'def r: map_values(round);'
+	FUNC="$FUNC"'def hr: to_entries | map(if .key == "h" then .value = (.value | round) else .value = (.value * 1000 | round) / 1000 end) | from_entries;'
+	FUNC="$FUNC"'def rgb: "rgb(\(.r), \(.g), \(.b))";'
+	FUNC="$FUNC"'def hsl: "hsl(\(.h), \(.s), \(.l))";'
+	FUNC="$FUNC"'def block: "<span color=\"\(.)\"><big>█</big></span>";'
+
+	while true; do
+		IFS=$'\n'
+
+		palettes="$(jq 'to_entries[] | select(.value|type=="object") | [.] | from_entries' <<<"$json")"
+		list=(null $(jq -r 'to_entries|map(.key)[]' <<<"$palettes"))
+		display=($'\u21a9\ufe0f Return' $(jq -r '.[]|.emoji + " " + .name' <<<"$palettes"))
+		palette="$(printf "%s\n" "${display[@]}" | dmenu-func -format i -p 'Palette:' -i)"
+		if [[ -z "$palette" ]]; then break; fi
+		if [[ "$palette" == 0 ]]; then
+			break
+		fi
+		disp_palette="${display["$palette"]}"
+		palette="${list["$palette"]}"
+
+		while true; do
+			list=(null $(jq -r '.[$p].colors | to_entries|map(.key)[]' --arg p "$palette" <<<"$json"))
+			display=("$disp_palette" $(jq -r "$FUNC"'.[$p].colors[] | "\(.hex|block)  <tt>\(.name)</tt>:<tt>\t\(.hex)</tt>,<tt>\t\(.rgb|rgb)</tt>,<tt>\t\(.hsl|hr|hsl)</tt>"' --arg p "$palette" <<<"$json"))
+
+			color="$(printf "%s\n" "${display[@]}" | column -ts$'\t' | dmenu-func -theme-str 'window {width: 800px;}' -markup-rows -format i -p 'Color:' -i)"
+			if [[ -z "$color" ]]; then break; fi
+			if [[ "$color" == 0 ]]; then
+				# return to previous screen
+				break
+			fi
+			color="${list["$color"]}"
+
+			while true; do
+				col="$(jq <<<"$json" --arg p "$palette" --arg c "$color" "$FUNC"'.[$p].colors[$c]+{"id":$c}')"
+				hex="$(jq -r '.hex' <<<"$col")"
+				list=($(jq -r "$FUNC"'null, .hex, (.hex|h), (.rgb|rgb), (.hsl|hsl), .name, .id' <<<"$col"))
+				display=($(jq -r "$FUNC"'"\(.hex|block)  \(.name)", "Hex: \(.hex)", "Hex: \(.hex|h)", "RGB: \(.rgb|hr|rgb)", "HSL: \(.hsl|hr|hsl)", "Name: \(.name)", "ID: \(.id)"' <<<"$col"))
+
+				format="$(printf "%s\n" "${display[@]}" | dmenu-func -select "Hex" -markup-rows -format i -p 'Format:' -i)"
+				if [[ -z "$format" ]]; then break; fi
+				if [[ "$format" == 0 ]]; then
+					# return to previous screen
+					break
+				fi
+				out="${list["$format"]}"
+
+				magick -size 256x256 "xc:$hex" /tmp/ctp-rofi.png
+				notify-send "$out" --app-name=Copied --icon=/tmp/ctp-rofi.png
+				wl-copy --type text/plain -- "$out"
+
+				return 0
+			done
+		done
+	done
+	return 1
+}
+ctp-rofi "$@"

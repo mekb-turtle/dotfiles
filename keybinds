@@ -14,9 +14,8 @@ keybinds=(
 	"$MOD, A, exec, \$HOME/.bin/emojiclip rofi" # Emoji menu
 	"$MOD, B, exec, if pidof -sq waybar; then killall -SIGUSR1 waybar; else ~/.bin/rewaybar; fi" # Toggle waybar
 	"$MOD, C, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy" # Clipboard history
-	"$MOD, X, exec, \$HOME/.bin/ctp-rofi" # Rofi Catppuccin color picker, this code is a mess so I'm not including it here
+	"$MOD, X, exec, \$HOME/.bin/ctp-rofi" # Rofi Catppuccin color picker
 	"$MOD SHIFT, C, exec, true | wl-copy; cliphist wipe && notify-send 'cleared clipboard history' -a ''" # Clear clipboard history
-	"$MOD SHIFT, V, exec, ~/.bin/dictation" # Voice dictation, https://github.com/ideasman42/nerd-dictation, pain to setup so I'm not including it here
 	"$MOD, Z, exec, dunstctl history-pop" # Show last notification
 	"$MOD, L, exec, ~/.bin/lock" # Lock screen
 	"$MOD SHIFT, L, exec, ~/.bin/toggle-autolock" # Toggle automatic locking
