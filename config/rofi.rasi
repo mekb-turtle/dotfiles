@@ -1,5 +1,5 @@
 configuration {
-	modi: "run,drun,filebrowser";
+	modi: "run,drun,filebrowser,emoji";
 	show-icons: true;
 	terminal: "kitty";
 	drun-display-format: "{icon} {name}";
@@ -11,6 +11,7 @@ configuration {
 	display-window: "   Window ";
 	display-network: " 󰤨  Network ";
 	display-filebrowser: "   Files ";
+	display-emoji: "   Emoji ";
 	sidebar-mode: true;
 }
 

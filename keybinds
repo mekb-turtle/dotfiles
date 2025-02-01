@@ -11,7 +11,7 @@ IFS=$'\n'
 keybinds=(
 	"$MOD CTRL, Space, exec, true | wl-copy" # Clear clipboard
 	"$MOD CTRL, C, exec, true | wl-copy" # Clear clipboard
-	"$MOD, A, exec, ~/.bin/emojiclip rofi" # Emoji menu
+	"$MOD, A, exec, rofi -show emoji" # Emoji menu
 	"$MOD, B, exec, ~/.bin/toggle-waybar" # Toggle waybar
 	"$MOD, C, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy" # Clipboard history
 	"$MOD, X, exec, ~/.bin/ctp-rofi" # Rofi Catppuccin color picker

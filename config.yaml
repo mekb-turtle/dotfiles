@@ -29,12 +29,8 @@
     - ~/.local/share/rofi/themes/
     - ~/.config/cava/
     - ~/.bin/
-    - ~/.bin/emojipicker/
 - link:
     ~/.bin/convert-wallpaper: scripts/convert-wallpaper
-    ~/.bin/emoji: submodules/emojipicker/emoji
-    ~/.bin/emojiclip: submodules/emojipicker/emojiclip
-    ~/.bin/emojipicker/emojis: submodules/emojipicker/emojis
     ~/.bin/hyprstart: scripts/hyprstart
     ~/.bin/ctp-rofi: scripts/ctp-rofi
     ~/.bin/lock: scripts/lock
