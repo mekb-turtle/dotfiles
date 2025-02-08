@@ -7,7 +7,7 @@
 	// Choose the order of the modules
 	"modules-left": [ "hyprland/window", "hyprland/workspaces"  ],
 	"modules-center": [ ],
-	"modules-right": [ "battery", "mpd", "pulseaudio", "clock", "tray" ],
+	"modules-right": [ "custom/weather", "battery", "mpd", "pulseaudio", "clock", "tray" ],
 	//"output": [ "DP-2", "HDMI-A-1", "DP-1", "eDP-1" ],
 	// Modules configuration
 	// "sway/workspaces": {
@@ -160,5 +160,12 @@
 		},
 		"on-click": "pavucontrol",
 		"on-click-right": "pavucontrol"
+	},
+	"custom/weather": {
+		"format": "{}°C",
+		"tooltip": true,
+		"interval": 1200,
+		"exec": "wttrbar $(<~/.config/waybar/wttrbar_args)",
+		"return-type": "json"
 	}
 }
