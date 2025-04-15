@@ -42,11 +42,18 @@ keybinds=(
 	"l:$MOD, KP_Begin, exec, swayosd-client --output-volume mute-toggle"
 	"l:$MOD, KP_Down, exec, swayosd-client --output-volume -5"
 
+	# More function keys
+	"l:, XF86HomePage, exec, "'$BROWSER'
+	"l:, XF86Mail, exec, thunderbird"
+	"l:, XF86Search, exec, rofi -show drun"
+	"l:, XF86Calculator, exec, kalgebra"
+
 	# Song control
-	"l:, XF86AudioPlay, exec, mpc toggle"
-	"l:, XF86AudioStop, exec, mpc stop"
-	"l:, XF86AudioPrev, exec, mpc prev"
-	"l:, XF86AudioNext, exec, mpc next"
+	"l:, XF86Tools, exec, xfmpc" # my keyboard has a music icon for this
+	"l:, XF86AudioPlay, exec, playerctl play-pause"
+	"l:, XF86AudioStop, exec, playerctl stop"
+	"l:, XF86AudioPrev, exec, playerctl previous"
+	"l:, XF86AudioNext, exec, playerctl next"
 
 	# Screenshot
 	", Print, exec, ~/.bin/screenshot area"

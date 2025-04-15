@@ -14,7 +14,7 @@
 1. Clone the repo: `git clone https://github.com/mekb-turtle/dotfiles`
 2. Run the following command to install the required packages with [Paru](https://github.com/Morganamilo/paru), or [you can install them manually, see the list below](#packages-to-install)
 
-    -     paru -S hyprland hyprland-qtutils waybar wttrbar dunst kitty hyprlock hyprpaper libnotify glib2 grim slurp wl-clipboard hyprpicker imagemagick jq tesseract tesseract-data-eng zbar pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland keepassxc openssh ttf-fira-code ttf-fira-mono ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-twemoji ttf-ubuntu-font-family catppuccin-gtk-theme-mocha papirus-folders-catppuccin-git catppuccin-cursors-mocha qt5ct qt6ct kvantum swayosd-git cliphist nemo mpv feh firefox gimp krita brightnessctl hypridle elogind rofi-wayland rofi-emoji darkly perl
+    -     paru -S hyprland hyprland-qtutils waybar waybar-mpris-git wttrbar dunst kitty hyprlock hyprpaper libnotify glib2 grim slurp wl-clipboard hyprpicker imagemagick jq tesseract tesseract-data-eng zbar pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse playerctl wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland keepassxc openssh ttf-fira-code ttf-fira-mono ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-twemoji ttf-ubuntu-font-family catppuccin-gtk-theme-mocha papirus-folders-catppuccin-git catppuccin-cursors-mocha qt5ct qt6ct kvantum swayosd-git cliphist nemo mpv feh firefox gimp krita brightnessctl hypridle elogind rofi-wayland rofi-emoji darkly perl
 
 3. Run the following command to install Papirus folder icons:
 
@@ -29,10 +29,10 @@
 > Edit then run `scripts/convert-wallpaper` to generate wallpapers for your monitor layout.
 
 ### Packages to install:
-- `hyprland` `hyprland-qtutils` `waybar` `wttrbar` `dunst` `kitty` `hyprpaper` `libnotify` `glib2` `jq` `swayosd-git` `cliphist` `brightnessctl`
+- `hyprland` `hyprland-qtutils` `waybar` `waybar-mpris-git` `wttrbar` `dunst` `kitty` `hyprpaper` `libnotify` `glib2` `jq` `swayosd-git` `cliphist` `brightnessctl`
 - Screenshot util: `grim` `slurp` `wl-clipboard` `hyprpicker` `imagemagick` `jq` `tesseract` `zbar` https://github.com/mekb-turtle/foto
   - Foto is available on the AUR as `foto` or `foto-git`
-- Audio and screensharing: `pipewire{,-alsa,-audio,-jack,-pulse}` `wireplumber` `xdg-desktop-portal{,-hyprland}`
+- Audio and screensharing: `pipewire{,-alsa,-audio,-jack,-pulse}` `playerctl` `wireplumber` `xdg-desktop-portal{,-hyprland}`
 - For power menu: https://github.com/mekb-turtle/do/ (add your user to the `do` group)
   - This tool is used to run power commands as root without password
   - To use it in your shell, run `\do shutdown` or `\do reboot`. You can also create aliases for these commands
